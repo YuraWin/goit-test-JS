@@ -130,16 +130,51 @@
 
 // *****Задача 1********************************************
 
-let balance = 10000;
-const payment = 2000;
+// let balance = 10000;
+// const payment = 2000;
 
-console.log(
-  `Общая стоимость заказа ${payment}  кредитов. Проверяем кол-во доступных средств на счету`,
-);
-if (payment <= balance) {
-  balance = balance - payment;
-  console.log(`Насчету осталось ${balance} кредитов`);
-} else {
-  console.log(`На счету недостаточно средств для проведения операции!`);
-}
-console.log('Операция завершена');
+// console.log(
+//   `Общая стоимость заказа ${payment}  кредитов. Проверяем кол-во доступных средств на счету`,
+// );
+// if (payment <= balance) {
+//   balance = balance - payment;
+//   console.log(`Насчету осталось ${balance} кредитов`);
+// } else {
+//   console.log(`На счету недостаточно средств для проведения операции!`);
+// }
+// console.log('Операция завершена');
+
+//Конспект Модуль 1
+// console.log('JavaScript is awesome'.length);
+
+// console.log('JavaScript is awesome'.toUpperCase());
+
+// // undefined
+// let a;
+// console.log(typeof a); // "undefined"
+
+// // null
+// const b = null;
+// console.log(typeof null); // "object"
+
+// // Number
+// const c = 5;
+// console.log(typeof c); // "number"
+
+// // String
+// const d = 'JavaScript is awesome!';
+// console.log(typeof d); // "string"
+
+// // Boolean
+// const e = false;
+// console.log(typeof e); // "boolean"
+
+// const message = 'Привет ребята!!!';
+// alert(message);
+
+/*
+ * Просим клиента подтвердить бронь на отель
+ * и сохраняем в переменную результат работы confirm
+ */
+const isComing = confirm('Please confirm hotel reservation');
+console.log(isComing);
