@@ -176,5 +176,5 @@
  * Просим клиента подтвердить бронь на отель
  * и сохраняем в переменную результат работы confirm
  */
-const isComing = confirm('Please confirm hotel reservation');
-console.log(isComing);
+// const isComing = confirm('Please confirm hotel reservation');
+// console.log(isComing);
