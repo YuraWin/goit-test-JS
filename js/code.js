@@ -178,3 +178,85 @@
  */
 // const isComing = confirm('Please confirm hotel reservation');
 // console.log(isComing);
+
+// let clientCounter = 18;
+// const maxClients = 25;
+
+// while (clientCounter <= maxClients) {
+//   console.log(clientCounter);
+//   clientCounter += 1;
+// }
+
+// let password = '';
+
+// do {
+//   password = prompt('Введите пароль длиннее 4-х символов', '');
+// } while (password.length < 5);
+
+// console.log('Ввели пароль: ', password);
+
+// const number = 10;
+
+// for (let i = 0; i < number; i += 1) {
+//   if (i % 2 === 0) {
+//     continue;
+//   }
+
+//   console.log('Нечетное i: ', i); // 1, 3, 5, 7, 9
+// }
+
+//Module 2 Massiv
+
+// const clients = ['Mango', 'Ajax', 'Poly'];
+
+// for (let i = 0; i < clients.length; i += 1) {
+//   console.log('Logging clients: ', clients[i]);
+// }
+
+// Итерация по массиву
+// const clients = ['Mango', 'Ajax', 'Poly'];
+
+// for (const client of clients) {
+//   console.log(client);
+//   console.log(clients);
+// }
+
+// // Итерация по строке
+// const string = 'javascript';
+
+// for (const character of string) {
+//   console.log(character);
+// }
+
+/*
+ * Для чисел меньше чем порог срабатывает continue, выполнение тела прекращается
+ * и управление передаётся на следующую итерацию.
+ */
+// const numbers = [1, 3, 14, 18, 4, 7, 29, 6, 34];
+// const threshold = 15;
+
+// for (let i = 0; i < numbers.length; i += 1) {
+//   if (numbers[i] < threshold) {
+//     continue;
+//   }
+
+//   console.log(`Число больше чем ${threshold}: ${numbers[i]}`); // 18, 29, 34
+// }
+//************************************************* */
+// const matrix = [
+//   [1, 2, 3],
+//   [4, 5, 6],
+//   [7, 8, 9],
+// ];
+// let total = 0;
+
+// for (let i = 0; i < matrix.length; i += 1) {
+//   console.log(`Подмассив матрицы matrix[${i}]: `, matrix[i]);
+
+//   for (let j = 0; j < matrix[i].length; j += 1) {
+//     console.log('Элемент подмассива матрицы matrix[i][j]: ', matrix[i][j]);
+//     total += matrix[i][j];
+//   }
+// }
+
+// console.log(total); // 45
