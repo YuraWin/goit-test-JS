@@ -258,5 +258,102 @@
 //     total += matrix[i][j];
 //   }
 // }
-
 // console.log(total); // 45
+//******************************************* */
+// let total2 = 0;
+
+// for (const elementMatrix of matrix) {
+//   //   console.log(elementMatrix);
+//   for (const underElementMatrix of elementMatrix) {
+//     console.log(underElementMatrix);
+//     total2 += underElementMatrix;
+//   }
+// }
+// console.log(total2);
+
+// console.log(matrix[0][2]);
+
+// const numbers = [];
+
+// for (let i = 0; i < 3; i += 1) {
+//   numbers.push(`label-${i}`);
+// }
+
+// console.log('numbers: ', numbers); // ['label-0', 'label-1', 'label-2']
+
+// for (const number of numbers) {
+//   console.log(number);
+// }
+
+// const clients = ['Mango', 'Ajax', 'Poly', 'Kiwi'];
+
+// // Вернет новый массив в котором будут элементы с индексами от 1 до 2
+// //console.log(clients.slice(1, 3)); // ["Ajax", "Poly"]
+
+// // Вернет новый массив в котором будут
+// // элементы с индексами от 1 до (clients.length - 1)
+// console.log(clients.slice(1)); // ["Ajax", "Poly", "Kiwi"]
+// console.log(clients.length);
+
+// Вернет копию исходного массива
+//console.log(clients.slice()); // ["Mango", Ajax", "Poly", "Kiwi"]
+
+// Вернет новый массив состоящих из последних двух элементом исходного
+//console.log(clients.slice(-2)); // ["Poly", "Kiwi"]
+
+//Массивы
+// const array = ['qwerty', 1, true];
+
+// for (const element of array) {
+//   console.log(typeof element);
+// }
+
+// for (let i = 0; i < array.length; i += 1) {
+//   console.log(typeof array[i]);
+//   console.log(`номер итерации ${i}`);
+// }
+// console.log(array.length);
+
+// for (let i = array.length - 1; i + 1 !== 0; i -= 1) {
+//   console.log(array[i]);
+//   console.log(`номер итерации ${i}`);
+// }
+
+//**************************** */
+// const array = ['qwerty', 1, true];
+
+// array[3] = 'Alex';
+// console.log(array);
+// array.length = 6;
+// console.log(array);
+// array[4] = true;
+// console.log(array);
+
+// for (let i = 0; i < 3; i += 1) {
+//   array.push(`text-${i}`);
+// }
+// console.log(array);
+
+//************************* */
+
+const clients = ['Mango', 'Poly', 'Ajax'];
+const clientNameToFind = 'oPoly';
+let message;
+
+for (const client of clients) {
+  /*
+   * На каждой итерации мы будем проверять совпадает ли элемент массива с
+   * именем клиента. Если совпадает то мы записываем в message сообщение
+   * об успехе и делаем break чтобы не искать дальше
+   */
+
+  if (client === clientNameToFind) {
+    message = 'Клиент с таким именем есть в базе данных!';
+    break;
+  }
+
+  // Если они не совпадают то запишем в resultMsg сообщeние об отсутсвии имени
+  message = 'Клиента с таким именем нету в базе данных!';
+}
+
+console.log(message);
