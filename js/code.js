@@ -336,24 +336,110 @@
 
 //************************* */
 
-const clients = ['Mango', 'Poly', 'Ajax'];
-const clientNameToFind = 'oPoly';
-let message;
+// const clients = ['Mango', 'Poly', 'Ajax'];
+// const clientNameToFind = '9Poly';
+// let message = 'Клиента с таким именем нету в базе данных!';
 
-for (const client of clients) {
-  /*
-   * На каждой итерации мы будем проверять совпадает ли элемент массива с
-   * именем клиента. Если совпадает то мы записываем в message сообщение
-   * об успехе и делаем break чтобы не искать дальше
-   */
+// for (const client of clients) {
+//   /*
+//    * На каждой итерации мы будем проверять совпадает ли элемент массива с
+//    * именем клиента. Если совпадает то мы записываем в message сообщение
+//    * об успехе и делаем break чтобы не искать дальше
+//    */
 
-  if (client === clientNameToFind) {
-    message = 'Клиент с таким именем есть в базе данных!';
-    break;
-  }
+//   if (client === clientNameToFind) {
+//     message = 'Клиент с таким именем есть в базе данных!';
+//     break;
+//   }
 
-  // Если они не совпадают то запишем в resultMsg сообщeние об отсутсвии имени
-  message = 'Клиента с таким именем нету в базе данных!';
-}
+//   // Если они не совпадают то запишем в resultMsg сообщeние об отсутсвии имени
+//   // message = 'Клиента с таким именем нету в базе данных!';
+// }
 
-console.log(message);
+// console.log(message);
+// console.table(clients);
+
+// const string = clients.join(' ');
+// console.log(string);
+
+// const array = string.split(' ');
+// console.table(array);
+
+// ***********************************
+
+// const clients = ['Mango', 'Poly', 'Ajax'];
+// const clientNameToFind = 'Poly';
+// let message;
+//= 'Клиента с таким именем нету в базе данных!';
+//message = 'Клиент с таким именем есть в базе данных!';
+// message = clients.includes(clientNameToFind)
+//   ? `Клиент с таким именем (${clientNameToFind}) есть в базе данных!`
+//   : `Клиента с таким именем (${clientNameToFind}) нету в базе данных!`;
+// console.log(message);
+// console.log((message = balance > 0 ? 'Позитив' : 'Негатив'));
+
+// const index = clients.indexOf(clientNameToFind);
+// message =
+//   index !== -1
+//     ? `Клиент с таким именем (${clientNameToFind}) на позиции ${index} есть в базе данных!`
+//     : `Клиента с таким именем (${clientNameToFind}) нету в базе данных!`;
+// console.log(message);
+
+// let length = clients.push('Nikolay', 'Ivan', 'Petro');
+// console.table(clients);
+// console.log(` ${length} - элементов в массиве`);
+
+// console.log(`Удалена запись - (${clients.pop()}) в массиве`);
+// console.table(clients);
+
+// let j = clients.length;
+// for (let i = 0; i < j; i += 1) {
+//   clients.pop();
+//   console.log(clients);
+// }
+// console.log(j);
+//******************************** */
+
+// const array = ['Mango', 'Kiwi', 'Lime'];
+
+// console.log(array);
+// console.log(`Удалена запись - ${array.shift(2)}`);
+// console.log(array);
+
+// array.unshift('Orange', 'Potato');
+// console.log(array);
+
+// *************************
+
+// const array = ['Mango', 'Kiwi', 'Lime', 'Orange', 'Potato'];
+
+// const array2 = array;
+
+// const newArray = array.slice();
+// const newArray2 = array.slice(2);
+
+// console.log(`array - ${array}`);
+// console.log(`array2 - ${array2}`);
+// console.log(`newArray - ${newArray}`);
+// console.log(`newArray2 - ${newArray2}`);
+
+// newArray.push(array.pop());
+// newArray.push(array.pop());
+
+// console.log(`array - ${array}`);
+// console.log(`array2 - ${array2}`);
+// console.log(`newArray - ${newArray}`);
+// console.log(`newArray2 - ${newArray2}`);
+
+// *********************************
+const score = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+
+console.log(`Действие splice метода удаления элементов - ${score.splice(5)}`);
+
+console.table(`Результат масси2ва ${score}`);
+
+const score2 = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+
+console.log(`Действие splice метода удаления элементов - ${score2.splice(5)}`);
+
+console.table(`Результат массива ${score2}`);
