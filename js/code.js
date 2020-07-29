@@ -436,10 +436,12 @@ const score = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
 
 console.log(`Действие splice метода удаления элементов - ${score.splice(5)}`);
 
-console.table(`Результат масси2ва ${score}`);
+console.table(`Результат массива ${score}`);
 
 const score2 = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
 
-console.log(`Действие splice метода удаления элементов - ${score2.splice(5)}`);
+console.log(
+  `Действие splice метода вставки элементов - ${score2.splice(5, 0, 'Ivan', 'Serg', 'Vasil')}`,
+);
 
 console.table(`Результат массива ${score2}`);
