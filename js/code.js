@@ -432,16 +432,73 @@
 // console.log(`newArray2 - ${newArray2}`);
 
 // *********************************
-const score = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+// const score = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
 
-console.log(`Действие splice метода удаления элементов - ${score.splice(5)}`);
+// console.log(`Действие splice метода удаления элементов - ${score.splice(5)}`);
 
-console.table(`Результат массива ${score}`);
+// console.table(`Результат массива ${score}`);
+// // *************************************
+// const score2 = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
 
-const score2 = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+// console.log(
+//   `Действие splice метода вставки элементов - ${score2.splice(5, 0, 'Ivan', 'Serg', 'Vasil')}`,
+// );
 
-console.log(
-  `Действие splice метода вставки элементов - ${score2.splice(5, 0, 'Ivan', 'Serg', 'Vasil')}`,
-);
+// console.table(`Результат массива ${score2}`);
+// // *********************************************
+// const score3 = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
 
-console.table(`Результат массива ${score2}`);
+// console.log(
+//   `Действие splice метода вставки элементов - ${score3.splice(6, 3, 'Ivan', 'Serg', 'Vasil')}`,
+// );
+
+// console.table(`Результат массива ${score3}`);
+
+// // *****************************************
+
+// const array1 = ['Mango', 'tomato', 'potato', 'cherry'];
+// const array2 = ['dog', 'cat', 'pitbull', 'horse'];
+// const array3 = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+// const allArray = array1.concat(array2, array3);
+// console.table(allArray);
+// ****************************************************
+
+// a, b, c это параметры
+// const add = function (a, b, c) {
+//   console.log(`Переменная ${a}, тип переменной (${typeof a})`);
+//   console.log(`Переменная ${b}, тип переменной (${typeof b})`);
+//   console.log(`Переменная ${c}, тип переменной (${typeof c})`);
+
+//   return a + b + c;
+// };
+
+// // 1, 2, 3 это аргументы
+// const result = add(1, 2, 3);
+// console.log(result); // 6
+
+// const count = function (countFrom = 0, countTo = 10, step = 1) {
+//   console.log(`countFrom = ${countFrom}, countTo = ${countTo}, step = ${step}`);
+
+//   for (let i = countFrom; i <= countTo; i += step) {
+//     console.log(i);
+//   }
+// };
+
+// count(1, 5); // countFrom = 1, countTo = 5, step = 1
+// count(2); // countFrom = 2, countTo = 10, step = 1
+// count(undefined, 5, 2); // countFrom = 0, countTo = 5, step = 2
+// count(0, 4, 2, 45, 67); // countFrom = 0, countTo = 10, step = 1
+
+const withdraw = function (amount, balance) {
+  if (amount === 0) {
+    console.log('Для проведения операции введите сумму больше нуля.');
+  } else if (amount > balance) {
+    console.log('Недостаточно средств на счету.');
+  } else {
+    console.log('Операция снятия средств проведена.');
+  }
+};
+
+withdraw(0, 300); // Для проведения операции введите сумму больше нуля.
+withdraw(500, 300); // Недостаточно средств на счету.
+withdraw(100, 300); // Операция снятия средств проведена.
