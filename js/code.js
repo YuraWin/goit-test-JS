@@ -489,16 +489,64 @@
 // count(undefined, 5, 2); // countFrom = 0, countTo = 5, step = 2
 // count(0, 4, 2, 45, 67); // countFrom = 0, countTo = 10, step = 1
 
-const withdraw = function (amount, balance) {
-  if (amount === 0) {
-    console.log('Для проведения операции введите сумму больше нуля.');
-  } else if (amount > balance) {
-    console.log('Недостаточно средств на счету.');
-  } else {
-    console.log('Операция снятия средств проведена.');
-  }
-};
+// const withdraw = function (amount, balance) {
+//   if (amount === 0) {
+//     console.log('Для проведения операции введите сумму больше нуля.');
+//   } else if (amount > balance) {
+//     console.log('Недостаточно средств на счету.');
+//   } else {
+//     console.log('Операция снятия средств проведена.');
+//   }
+//   return amount + balance;
+// };
 
-withdraw(0, 300); // Для проведения операции введите сумму больше нуля.
-withdraw(500, 300); // Недостаточно средств на счету.
-withdraw(100, 300); // Операция снятия средств проведена.
+// withdraw(10, 300); // Для проведения операции введите сумму больше нуля.
+// withdraw(500, 300); // Недостаточно средств на счету.
+// //withdraw(100, 300); // Операция снятия средств проведена.
+// console.log(withdraw(500, 300));
+
+// ************************************************
+// const drop = function () {
+//   let total = 0;
+
+//   for (const argument of arguments) {
+//     total += argument;
+//   }
+//   return total;
+// };
+
+// console.log(drop(1, 2, 5, 89, 6, 3));
+// *************************************************
+
+// const fn = function () {
+//   console.log(arguments);
+//   const args = Array.from(arguments).slice(2);
+//   return console.table(args);
+// };
+
+// const fn2 = function (...args2) {
+//   return console.log(args2);
+// };
+
+// fn(454, 'иванов', 879, 'петров', true);
+// fn2(1, 2, 3, 4, 5, 6, 7);
+
+//****************************************** */
+
+// const add = (a, b, c, d) => {
+//   return a * b * c * d;
+// };
+
+// console.log(add(1, 2, 3, 4));
+
+// const fun = x => {
+//   return console.table(x.split(' '));
+// };
+
+// fun('ываыв ыва ва ыва sf  ыва  ыва  ва  fsf ыва ');
+// *********************************************
+
+// const print = () => 5 + 6 + 8;
+// // print();
+
+// console.log(print());
