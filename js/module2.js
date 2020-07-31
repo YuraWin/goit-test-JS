@@ -47,3 +47,99 @@
 // 'jumped'
 
 // Exercise 4**************************************************
+// function formatString(string, maxLength = 40) {
+//   if (string.length <= maxLength) {
+//     return string;
+//   }
+//   const arrayString = string.split('');
+//   return arrayString.splice(0, maxLength).join('') + '...';
+// }
+
+// console.log(formatString('Vestibulum facilisis, purus nec pulvinar iaculis.'));
+// 'Vestibulum facilisis, purus nec pulvinar...'
+
+// ****************************************************************
+// Exercise 5****************************************************************
+// function checkForSpam(str) {
+//   return str.toLowerCase().includes('spam') || str.toLowerCase().includes('sale');
+// }
+
+// console.log(checkForSpam('Latest technology news')); // false
+
+// ****************************************************************
+// Exercise 6****************************************************************
+
+// function mapArray(array) {
+//   const numbers = new Array(array.length);
+//   for (let i = 0; i < array.length; i += 1) {
+//     numbers[i] = array[i] * 10;
+//   }
+//   return numbers;
+// }
+// console.log(mapArray([-2, 0, 2]));
+// ****************************************************************
+// Exercise 7****************************************************************
+// function filterArray(array) {
+//   const numbers = [];
+//   for (let i = 0; i < array.length; i += 1) {
+//     // Write code under this line
+//     if (Number.isFinite(array[i])) {
+//       numbers.push(array[i]);
+//     }
+//   }
+//   return numbers;
+// }
+
+// console.log(filterArray([-2, 0, 2]));
+
+// ****************************************************************
+// Exercise 8***Variant 1*************************************************************
+// function reduceArray(array) {
+//   let total = 0;
+
+//   if (array.length !== 0) {
+//     for (const item of array) {
+//       total += item;
+//     }
+//   }
+
+//   return total;
+// }
+
+// console.log(reduceArray([1, 2, 2.5]));
+
+// ****************************************************************
+// Exercise 9***Variant 1*************************************************************
+// function isLoginValid(login, min = 4, max = 16) {
+//   if (login.length >= min && login.length <= max) {
+//     return true;
+//   }
+//   return false;
+// }
+
+// function isLoginUnique(allLogins, login) {
+//   return !allLogins.includes(login);
+// }
+
+// function addLogin(allLogins, login) {
+//   const SUCCESS = 'Логин успешно добавлен!';
+//   const REFUSAL = 'Такой логин уже используется!';
+//   const ERROR = 'Ошибка! Логин должен быть размером от 4 до 16 символов';
+//   let message;
+
+//   if (!isLoginValid(login)) {
+//     return ERROR;
+//   }
+
+//   if (!isLoginUnique(allLogins, login)) {
+//     return REFUSAL;
+//   }
+
+//   allLogins.push(login);
+//   return SUCCESS;
+// }
+
+// const logins = ['Mango', 'robotGoogles', 'Poly', 'Aj4x1sBozz', 'qwerty123'];
+// console.log(addLogin(logins, 'Ajax'));
+
+//******************************************************** */
