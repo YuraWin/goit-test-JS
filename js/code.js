@@ -550,3 +550,23 @@
 // // print();
 
 // console.log(print());
+
+// Module 3  Object**********************************************
+
+const hotel = {};
+let name = 'Indistructable';
+let duration = 180;
+let style = ['pop', 'jaz', 'soul', 'punk', 'rock'];
+
+hotel['name'] = 'Hotel California';
+hotel.star = 5;
+hotel.roomCount = 150;
+
+console.log(hotel);
+
+hotel['roomCount'] += 3;
+
+console.log(hotel);
+
+delete hotel['star'];
+console.log(hotel);
