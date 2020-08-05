@@ -553,20 +553,93 @@
 
 // Module 3  Object**********************************************
 
-const hotel = {};
-let name = 'Indistructable';
-let duration = 180;
-let style = ['pop', 'jaz', 'soul', 'punk', 'rock'];
+// const hotel = {};
+// let name = 'Indistructable';
 
-hotel['name'] = 'Hotel California';
-hotel.star = 5;
-hotel.roomCount = 150;
+// hotel['name'] = 'Hotel California';
+// hotel.star = 5;
+// hotel.roomCount = 150;
 
-console.log(hotel);
+// console.log(hotel);
 
-hotel['roomCount'] += 3;
+// hotel['roomCount'] += 3;
 
-console.log(hotel);
+// console.log(hotel);
 
-delete hotel['star'];
-console.log(hotel);
+// delete hotel['star'];
+// console.log(hotel);
+// console.log(hotel.pool);
+//******************************************** */
+// let duration = 180;
+// let style = ['pop', 'jaz', 'soul', 'punk', 'rock'];
+
+// const song = {
+//   duration,
+//   style,
+//   star: 10,
+// };
+// console.log(song);
+// ********************************************
+// const key = 'person';
+// const object = {};
+// const title = 'name';
+// const count = 25;
+
+// object[key] = 'Mango';
+// console.log(object); //
+
+// object[title] = 'vasil';
+
+// console.log(object);
+
+// object[title] = 'Petro';
+
+// object[count] = 100;
+
+// console.log(object);
+// *******************************************
+
+// const key = 'person';
+// const getKey = function (name) {
+//   return name;
+// };
+
+// // Computed properties
+// const object = {
+//   [key]: 'Mango',
+//   [getKey('age')]: 2,
+//   [getKey('Old_school')]: 50,
+//   printName() {
+//     console.log('Take print');
+
+//     },
+// };
+
+// console.log(object); // {person: 'Mango', age: 2}
+
+// object[getKey('Old_school')] = 100;
+// console.log(object);
+
+// object.printName();
+
+// ********************************************************
+const object = {
+  key: 20,
+  title: 'Google',
+  masiv: [10, 20, 30, 40],
+  changeTitle(name) {
+    this.title = name;
+  },
+};
+
+console.log(object);
+
+object.changeTitle('Rambler');
+
+console.log(object);
+
+for (const part in object) {
+  //console.log('Key', part);
+  // console.log('Value', object[part]);
+  console.log(`${part} : ${object[part]}`);
+}
