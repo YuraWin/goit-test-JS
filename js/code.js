@@ -622,24 +622,150 @@
 
 // object.printName();
 
-// ********************************************************
-const object = {
-  key: 20,
-  title: 'Google',
-  masiv: [10, 20, 30, 40],
-  changeTitle(name) {
-    this.title = name;
-  },
-};
+// // ********************************************************
+// const object = {
+//   key: 20,
+//   title: 'Google',
+//   masiv: [10, 20, 30, 40],
+//   changeTitle(name) {
+//     this.title = name;
+//   },
+// };
 
-console.log(object);
+// console.log(object);
 
-object.changeTitle('Rambler');
+// object.changeTitle('Rambler');
 
-console.log(object);
+// console.log(object);
 
-for (const part in object) {
-  //console.log('Key', part);
-  // console.log('Value', object[part]);
-  console.log(`${part} : ${object[part]}`);
-}
+// for (const part in object) {
+//   //console.log('Key', part);
+//   // console.log('Value', object[part]);
+//   console.log(`${part} : ${object[part]}`);
+// }
+// **************************************************************
+
+// const objHotel = {
+//   name: 'Hilton',
+//   capacity: 100,
+//   stars: 5,
+// };
+
+// console.log(Object.keys(objHotel));
+// console.log(Object.values(objHotel));
+// console.log(Object.entries(objHotel));
+
+// for (const key of Object.entries(objHotel)) {
+//   console.log('Ключ объекта со значением', key);
+//   for (const item of key) {
+//     console.log(item);
+//   }
+// }
+
+// for (const entries of Object.entries(objHotel)) {
+//   console.log(`${entries[0]}: ${entries[1]}`);
+// }
+// **************************************************
+
+// const tray = {
+//   apple: 5,
+//   orange: 34,
+//   potato: 20,
+//   tomato: 10,
+// };
+// let total = 0;
+
+// for (const values of Object.values(tray)) {
+//   total += values;
+// }
+// console.log('Кол-во продуктов :', total);
+// // ******************************************************
+// const hotel = {
+//   name: 'Resort Hotel',
+//   stars: 5,
+//   capacity: 100,
+// };
+
+// const keys = Object.keys(hotel); // ["name", "stars", "capacity"]
+
+// for (const key of keys) {
+//   console.log('Value: ', hotel[key]);
+// }
+
+// for (const key in hotel) {
+//   console.log(`${key}: ${hotel[key]}`);
+// }
+// ************************************************************
+
+// const array = [23, 4, 5, 78, 2, 1, 25, 78, 45];
+
+// console.log(Math.min(...array));
+
+// const house = ['Iren', 'Nikolay', 'Petro', 'Semen'];
+// const copyHouse = [...house, 'Sandra', ...house];
+// console.log(house);
+// console.log(copyHouse);
+// console.log(house === copyHouse);
+
+// const exHouse = [...copyHouse.slice(0, 2), ...copyHouse.slice(4, 5)];
+// console.log(exHouse);
+// ****************************************************************
+// const a = { x: 1, y: 2 };
+// const b = { x: 'hi', z: 3 };
+
+// const c = Object.assign({ f: 4, r: 8 }, a, b);
+// console.log(c); // {x: 0, y: 2, z: 3}
+
+// // То же самое используя операцию spread
+// const d = { ...a, ...b };
+
+// console.log(d); // {x: 0, y: 2, z: 3}
+
+// *****************************************************************
+// const add = function (oneNumber, ...args) {
+//   console.log(args); // массив всех аргументов
+//   console.log(oneNumber); // массив всех аргументов
+//   //console.log(arguments);
+// };
+// add(1, 2, 3);
+// add(1, 2, 3, 4, 5);
+// ******************************************************************
+// const hotel = {
+//   name: 'Resort Hotel',
+//   stars: 5,
+//   capacity: 100,
+// };
+
+// // Объявим переменные и присвоим им значения из объекта
+// const { name: hotelName = '', stars = 3, status = 'empty' } = hotel;
+
+// console.log(hotelName, stars, status); // "Resort Hotel", 5, undefined
+// ********************************************************************
+
+// const playlist = {
+//   name: 'Song',
+//   duration: 120,
+//   stars: 5,
+// };
+
+// const { name, ...rest } = playlist;
+// console.log(name);
+// console.log(rest);
+// console.log(rest.stars);
+// console.log(rest['duration']);
+// ********************************************************************
+
+// const array = [11, 22, 333, 4444];
+
+// const [val1, val2, val3, val4] = array;
+// console.log(val1, val2, val3, val4);
+
+// const [val, ...rest] = array;
+// console.log(rest);
+// rest[0] = 100;
+// console.log(rest);
+// console.log(array);
+
+// const [, , , four] = array;
+// console.log(four);
+// **************************************
