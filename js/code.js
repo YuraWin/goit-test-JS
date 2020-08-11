@@ -770,3 +770,240 @@
 // console.log(four);
 
 // **************************************
+
+//Module 4*****************************************
+
+// const printMessage = function (message) {
+//   console.log(message);
+// };
+
+// const higherOrderFunction = function (callback) {
+//   const string = 'HOCs are awesome';
+//   callback(string);
+// };
+
+// higherOrderFunction(printMessage);
+
+// printName('Yuriy');
+
+// function printName(name) {
+//   console.log(name);
+// }
+
+// const usePrintName = function (useFunction) {
+//   const string = 'Andrey';
+//   useFunction(string);
+// };
+// usePrintName(printName);
+// ********************************
+// const print = function (string) {
+//   console.log('Value:', string);
+// };
+
+// const repeatLog = function (n, action) {
+//   for (let i = 0; i < n; i += 1) {
+//     action(i);
+//   }
+// };
+
+// repeatLog(6, print);
+// **********************************
+// const repeat = function (n, action) {
+//   for (let i = 0; i < n; i += 1) {
+//     action(i);
+//   }
+// };
+
+// const labels = [];
+
+// const value = value => {
+//   labels.push(`Label ${value + 1}`);
+// };
+// repeat(5, value);
+
+// console.log(labels); // ["Label 1", "Label 2", "Label 3", "Label 4", "Label 5"]
+// // *********************************
+
+// const filter = function (array, test) {
+//   const filteredElements = [];
+
+//   for (const element of array) {
+//     const passed = test(element);
+
+//     if (passed) {
+//       filteredElements.push(element);
+//     }
+//   }
+
+//   return filteredElements;
+// };
+
+// const fruits = [
+//   { name: 'apples', quantity: 200, isFresh: true },
+//   { name: 'grapes', quantity: 150, isFresh: false },
+//   { name: 'bananas', quantity: 100, isFresh: true },
+// ];
+
+// const freshFruits = filter(fruits, fruit => fruit.isFresh);
+// console.table(freshFruits);
+
+// const fruitsWithQuantity = filter(fruits, fruit => fruit.quantity >= 120);
+// console.table(fruitsWithQuantity);
+// *************************************
+
+// const createCounter = function () {
+//   /*
+//    * Локальная переменная privateValue доступна только в замыкании.
+//    * Получить к ней доступ во внешнем коде невозможно.
+//    */
+//   let privateValue = 0;
+
+//   const increment = function () {
+//     privateValue += 1;
+//     console.log(privateValue);
+//   };
+
+//   return { increment };
+// };
+
+// const counterA = createCounter();
+// counterA.increment(); // 1
+// counterA.increment(); // 2
+
+// const counterB = createCounter();
+// counterB.increment(); // 1
+// counterB.increment(); // 2
+// counterB.increment(); // 3
+// ******************************************
+// const makeShef = function (name) {
+//   return function makeDish(dish) {
+//     console.log(`${name} is coking ${dish}`);
+//   };
+// };
+
+// const mango = makeShef('Mango');
+// mango('tomato');
+// mango('orange');
+
+// const alli = makeShef('Alli');
+// alli('cofe');
+// mango('apple');
+// **************************************************
+// const petya = {
+//   name: 'Petya',
+//   showName() {
+//     console.log(this.name);
+//   },
+// };
+// petya.showName();
+
+// function fn() {
+//   console.log(this);
+// }
+
+// fn();
+// *****************************
+// const petya = {
+//   name: 'Petya',
+//   showThis() {
+//     console.log(this);
+//   },
+//   showName() {
+//     console.log(this.name);
+//   },
+// };
+
+// petya.showThis();
+// petya.showName();
+// // **************************
+// function showThis() {
+//   console.log('this in showThis: ', this);
+// }
+
+// showThis();
+
+// const user = { name: 'Mango' };
+// user.showContext = showThis;
+
+// user.showContext();
+// *********************************************
+// const hotel = {
+//   name: 'Resort Hotel',
+//   showThis() {
+//     console.log(this);
+//   },
+// };
+
+// const fn = function (callback) {
+//   callback();
+// };
+
+// fn(hotel.showThis);
+// ****************************
+// const hotel = {
+//   name: 'Resort Hotel',
+//   showThis() {
+//     const fn = () => {
+//       console.log('this in fn: ', this);
+//     };
+
+//     fn();
+//     console.log('this in showThis: ', this);
+//   },
+// };
+
+// hotel.showThis();
+// ********************************************
+// const greet = function () {
+//   return `Wellcome to ${this.name} hotel!`;
+// };
+// const hotel = { name: 'Resort Hotel' };
+
+// console.log(greet.call(hotel));
+// console.log(greet.apply(hotel));
+
+// ******************
+// const greet = function (guest, stars) {
+//   return `${guest}, welcome to ${stars} -star ${this.name}!`;
+// };
+
+// const hotel = { name: 'Resors Hotel' };
+// const motel = { name: 'Sunlight Motel' };
+
+// console.log(greet.call(hotel, 'Mango', 5));
+// console.log(greet.call(motel, 'Poly', 4));
+// ***************************************
+
+// const greet = function (guest, stars) {
+//   return `${guest}, welcome to ${stars}-star ${this.name}!`;
+// };
+
+// const hotel = { name: 'Resort Hotel' };
+// const motel = { name: 'Sunlight Motel' };
+
+// console.log(greet.apply(hotel, ['Mango', 5]));
+// console.log(greet.apply(motel, ['Poly', 4]));
+// ??????????????????????????********************
+// const greet = function (guest) {
+//   return `${guest}, welcome to ${this.name}!`;
+// };
+
+// const hotel = { name: 'Resort Hotel' };
+
+// const hotelGreeter = greet.bind(hotel, 'Mango');
+
+// console.log(hotelGreeter());
+//*??????????????????????????????????????? */
+// const hotel = {
+//   name: 'Resort Hotel',
+//   showThis() {
+//     console.log(this);
+//   },
+// };
+
+// const fn = function (callback) {
+//   callback();
+// };
+
+// fn(hotel.showThis.bind(hotel));
+// ******??????????????????????
