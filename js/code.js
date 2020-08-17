@@ -1007,3 +1007,123 @@
 
 // fn(hotel.showThis.bind(hotel));
 // ******??????????????????????
+
+//Module 5****************************************
+// const baseSalary = 30000;
+// const overtime = 10;
+// const rate = 20;
+
+// const getWage = (baseSalary, overtime, rate) => {
+//   return baseSalary + overtime * rate;
+// };
+// console.log(getWage(baseSalary, overtime, rate));
+
+// // *****************************
+// const employee = {
+//   baseSalary: 30000,
+//   overtime: 10,
+//   rate: 20,
+//   getWage() {
+//     return this.baseSalary + this.overtime * this.rate;
+//   },
+// };
+// console.log(employee.getWage());
+// ***********************************
+// const Hotel = function (name, stars, capacity) {
+//   this.name = name;
+//   this.stars = stars;
+//   this.capacity = capacity;
+// };
+// const hotel = new Hotel('Resort Hotel', 5, 100);
+// console.log(hotel);
+// const motel = new Hotel('Motel', 1, 50);
+// console.log(motel);
+// console.log(hotel);
+// // *************************************
+// const Hotel = function (name, stars, capacity) {
+//   this.name = name;
+//   this.stars = stars;
+//   this.capacity = capacity;
+//   this.guestCount = 0;
+
+//   this.greet = function (guestName) {
+//     console.log(`Hello ${guestName}, wellcome to ${this.name}`);
+//   };
+
+//   this.addGuests = function (amount) {
+//     this.guestCount += amount;
+//   };
+//   this.removeGuests = function (amount) {
+//     this.guestsCount -= amount;
+//   };
+// };
+
+// const hotel = new Hotel('Sunrise Hotel', 5, 100);
+
+// console.log(hotel);
+// hotel.greet('Mango');
+// hotel.addGuests(55);
+// console.log(hotel);
+// // ************************************
+// const mango = {
+//   name: 'Mango',
+//   sales: 5,
+//   sell(product) {
+//     this.sales += 1;
+//     return `Manager ${this.name} sold ${product}.`;
+//   },
+// };
+
+// console.log(mango.sales);
+// console.log(mango.sell('TV'));
+// console.log(mango.sell('Microwave'));
+// console.log(mango.sales);
+
+// const poly = {
+//   name: 'Poly',
+//   sales: 10,
+//   sell(product) {
+//     this.sales += 1;
+//     return `Manager ${this.nsme} sold ${product}.`;
+//   },
+// };
+
+// console.log(poly.sales);
+// console.log(poly.sell('TV'));
+// console.log(poly.sell('Microwave'));
+// console.log(poly.sales);
+// ***************************
+
+// const Manager = function (name = 'manager', sales = 0) {
+//   this.name = name;
+//   this.sales = sales;
+
+//   this.sell = function (product) {
+//     this.sales += 1;
+//     return `Manager ${this.name} sold ${product}.`;
+//   };
+// };
+
+// const mango = new Manager('Mango', 5);
+// console.log(mango.sales);
+// console.log(mango.sell('TV'));
+// console.log(mango.sell('Microwave'));
+// console.log(mango.sales);
+
+// const petro = new Manager('Petro', 10);
+// console.log(petro.sales);
+// console.log(petro.sell('PSP'));
+// console.log(petro.sell('TV-box'));
+// console.log(petro.sales);
+
+// const pusto = new Manager();
+// console.log(pusto);
+// ********************************
+
+const animal = { eats: true };
+const dog = { barks: true, eats: false };
+
+dog.__proto__ = animal;
+
+console.log(dog.barks);
+console.log(dog.eats);
