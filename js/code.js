@@ -1120,10 +1120,131 @@
 // console.log(pusto);
 // ********************************
 
-const animal = { eats: true };
-const dog = { barks: true, eats: false };
+// const animal = { eats: true };
+// const dog = { barks: true, eats: false };
 
-dog.__proto__ = animal;
+// dog.__proto__ = animal;
 
-console.log(dog.barks);
-console.log(dog.eats);
+// console.log(dog.barks);
+// console.log(dog.eats);
+// ****************************************
+
+// const animal = { eats: true };
+// const dog = Object.create(animal);
+// dog.barks = true;
+
+// for (const key in dog) {
+//   if (dog.hasOwnProperty(key)) {
+//     console.log(key);
+//   }
+// }
+
+// const dogKeys = Object.keys(dog);
+// console.log(dogKeys);
+// *****************************
+// const Guest = function (name, room) {
+//   this.name = name;
+//   this.room = room;
+// };
+
+// const mango = new Guest('Mango', 28);
+// console.log(mango);
+
+// Guest.prototype.showGuestInfo = function () {
+//   console.log(`name: ${this.name}, room: ${this.room}`);
+// };
+
+// const poly = new Guest('Poly', 36);
+
+// mango.showGuestInfo();
+// poly.showGuestInfo();
+// ****************************
+
+// const Hero = function (name, xp) {
+//   this.name = name;
+//   this.xp = xp;
+// };
+
+// Hero.prototype.gainXp = function (amount) {
+//   console.log(`${this.name} gained ${amount} experience poins`);
+//   this.xp += amount;
+// };
+
+// const mango = new Hero('Mango', 1000);
+// // console.log(mango);
+
+// // mango.gainXp(500);
+// // console.log(mango);
+
+// const Warrior = function (name, xp, weapon) {
+//   Hero.call(this, name, xp);
+//   this.weapon = weapon;
+// };
+
+// Warrior.prototype.attack = function () {
+//   console.log(`${this.name} attacks with ${this.weapon}`);
+// };
+
+// const poly = new Warrior('Poly', 200, 'sword');
+
+// console.log(poly);
+// poly.attack();
+
+// Warrior.prototype = Object.create(Hero.prototype);
+// // console.log(poly);
+// console.log(Warrior.prototype);
+
+// Warrior.prototype.constructor = Warrior;
+// console.log(Warrior.prototype.constructor);
+
+// console.log(poly);
+// poly.gainXp(300);
+
+/*
+ * Используем Object.create() для того чтобы изначально записать
+ * в Warrior.prototype пустой объект, в __proto__ которого будет
+ * ссылка на Hero.prototype. Это необходимо сделать до того
+ * как добавлять методы
+ */
+// ??????????????????????????????/
+// Warrior.prototype = Object.create(Hero.prototype);
+
+// // Не забываем добавить в Warrior.prototype свойство constructor
+// Warrior.prototype.constructor = Warrior;
+
+// // Добавим метод для атаки
+// Warrior.prototype.attack = function () {
+//   console.log(`${this.name} attacks with ${this.weapon}`);
+// };
+
+// // Попробуем теперь
+// poly.gainXp(300); // Poly gained 300 experience points
+// ??????????????????????????????
+
+const Hero = function (name, xp) {
+  this.name = name;
+  this.xp = xp;
+};
+
+Hero.prototype.gainXP = function (amount) {
+  console.log(`${this.name} gained ${amount} experience points`);
+  this.xp += amount;
+};
+
+const Warrior = function (name, xp, weapon) {
+  Hero.call(this, name, xp);
+  this.weapon = weapon;
+};
+
+Warrior.prototype = Object.create(Hero.prototype);
+// Warrior.prototype.constructor = Warrior;
+
+Warrior.prototype.attack = function () {
+  console.log(`${this.name} attacks with ${this.weapon}`);
+};
+
+const poly = new Warrior('Poly', 200, 'sword');
+poly.attack();
+console.log(poly);
+poly.gainXP(500);
+console.log(poly);
