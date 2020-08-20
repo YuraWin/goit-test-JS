@@ -1221,30 +1221,130 @@
 // poly.gainXp(300); // Poly gained 300 experience points
 // ??????????????????????????????
 
-const Hero = function (name, xp) {
-  this.name = name;
-  this.xp = xp;
-};
+// const Hero = function (name, xp) {
+//   this.name = name;
+//   this.xp = xp;
+// };
 
-Hero.prototype.gainXP = function (amount) {
-  console.log(`${this.name} gained ${amount} experience points`);
-  this.xp += amount;
-};
+// Hero.prototype.gainXP = function (amount) {
+//   console.log(`${this.name} gained ${amount} experience points`);
+//   this.xp += amount;
+// };
 
-const Warrior = function (name, xp, weapon) {
-  Hero.call(this, name, xp);
-  this.weapon = weapon;
-};
+// const Warrior = function (name, xp, weapon) {
+//   Hero.call(this, name, xp);
+//   this.weapon = weapon;
+// };
 
-Warrior.prototype = Object.create(Hero.prototype);
-// Warrior.prototype.constructor = Warrior;
+// Warrior.prototype = Object.create(Hero.prototype);
+// // Warrior.prototype.constructor = Warrior;
 
-Warrior.prototype.attack = function () {
-  console.log(`${this.name} attacks with ${this.weapon}`);
-};
+// Warrior.prototype.attack = function () {
+//   console.log(`${this.name} attacks with ${this.weapon}`);
+// };
 
-const poly = new Warrior('Poly', 200, 'sword');
-poly.attack();
-console.log(poly);
-poly.gainXP(500);
-console.log(poly);
+// const poly = new Warrior('Poly', 200, 'sword');
+// poly.attack();
+// console.log(poly);
+// poly.gainXP(500);
+// console.log(poly);
+//*************************************************** */
+// class Guest {
+//   constructor(name, roomNumber) {
+//     this.name = name;
+//     this.roomNumber = roomNumber;
+//   }
+
+//   getFullInfo() {
+//     console.log(`
+//     Guest ${this.name}
+//     Room number ${this.roomNumber}
+//     `);
+//   }
+// }
+// const mango = new Guest('Mango', 32);
+// console.log(mango);
+// mango.getFullInfo();
+
+// console.log(mango instanceof Guest);
+// console.log(mango instanceof Object);
+// ******************************
+// class Guest {
+//   constructor(name, roomNumber) {
+//     this._name = name;
+//     this._roomNumber = roomNumber;
+//   }
+//   get name() {
+//     return this._name;
+//   }
+
+//   set name(value) {
+//     this._name = value;
+//   }
+
+//   getInfo() {
+//     console.log(this);
+//   }
+// }
+
+// const mango = new Guest('Mango', 26);
+// console.log(mango);
+
+// console.log(mango.name);
+
+// mango.name = 'Mango the Fluffy';
+// console.log(mango.name);
+// mango.getInfo();
+// const poly = new Guest('Poly', 44);
+// poly.getInfo();
+// console.log(poly.name);
+// **************************
+// class Calc {
+//   constructor() {}
+
+//   static get PI() {
+//     return 3.1415926;
+//   }
+//   static add(...args) {
+//     return args.reduce((acc, next) => acc + next, 0);
+//   }
+//   static mult(...args) {
+//     return args.reduce((acc, next) => acc * next, 1);
+//   }
+// }
+
+// console.log(Calc.PI);
+// console.log(Calc.add(2, 3, 4));
+// console.log(Calc.mult(12, 3, 4));
+// ///////////////////////////////////
+
+// class Animal {
+//   constructor(name) {
+//     this.name = name;
+//   }
+//   move() {
+//     console.log(`I, ${this.name}, am moving!`);
+//   }
+// }
+// class Dog extends Animal {
+//   constructor(name, breed) {
+//     super(name);
+//     this.breed = breed;
+//   }
+
+//   bark() {
+//     console.log('woof!');
+//   }
+
+//   moveAndMakeSound() {
+//     super.move();
+//     this.bark();
+//   }
+// }
+
+// const dog = new Dog('Mango', 'shepherd');
+// dog.move();
+// dog.bark();
+// dog.moveAndMakeSound();
+
+// console.log(dog);
