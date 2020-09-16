@@ -1348,3 +1348,1297 @@
 // dog.moveAndMakeSound();
 
 // console.log(dog);
+
+//Module 6************************************
+
+//repeat All for module 2 *************************
+// const array = ['mango', 'poly', 'kiwi', 'ajax'];
+
+// for (let i = 0; i < array.length; i += 1) {
+//   array[i] += '-1';
+// }
+// console.log(array);
+
+// const cart = [54, 28, 105, 78, 92, 17, 120];
+// let total = 0;
+
+// // for (const el of cart) {
+// //   total += el;
+// // }
+
+// for (let i = 0; i < cart.length; i += 1) {
+//   total += cart[i];
+// }
+// console.log(total);
+
+// const numbers = [1, 5, 8, 9, 12, 4, 15, 27, 30, 18, 11];
+// let total = 0;
+// let totalNot2 = 0;
+// let totalAll = 0;
+// for (const number of numbers) {
+//   if (number % 2 === 0) {
+//     console.log('Четное число :', number);
+//     total += number;
+//     continue;
+//   }
+//   console.log('Нечетное число :', number);
+//   totalNot2 += number;
+// }
+// for (let i = 0; i < numbers.length; i += 1) {
+//   totalAll += numbers[i];
+// }
+
+// console.log('Сумма всех четных чисел:', total);
+// console.log('Сумма всех нечетных чисел:', totalNot2);
+// console.log('Сумма всех чисел:', totalAll);
+
+// const logins = ['m4ngoDog', 'k1widab3st', 'poly1scute', 'aj4xth3m4n'];
+// const loginToFind = 'poly1scute4';
+// let message = ``;
+// for (let i = 0; i < logins.length; i += 1) {
+//   if (loginToFind === logins[i]) {
+//     message = `Пользователь ${loginToFind} найден`;
+//     break;
+//   }
+//   message = `Пользователь ${loginToFind} не найден `;
+// }
+// console.log(message);
+
+// for (const login of logins) {
+//   if (loginToFind === login) {
+//     message = `Пользователь ${loginToFind} найден`;
+//     break;
+//   }
+//   message = `Пользователь ${loginToFind} не найден `;
+// }
+// console.log(message);
+
+// message = logins.includes(loginToFind)
+//   ? `Пользователь ${loginToFind} найден`
+//   : `Пользователь ${loginToFind} не найден `;
+
+// console.log(message);
+
+// const numbers = [51, 18, 13, 24, 7, 85, 19];
+
+// // console.log(Math.min(...numbers));
+// let minNumber = numbers[0];
+// for (const number of numbers) {
+//   if (minNumber > number) {
+//     minNumber = number;
+//   }
+// }
+// console.log('Наименьшее число массива: ', minNumber);
+
+// const friends = ['Mango', 'Poly', 'Kiwi', 'Ajax'];
+// let string = '';
+// for (let i = 0; i < friends.length; i += 1) {
+//   if (i === friends.length - 1) {
+//     string += friends[i];
+//   } else {
+//     string += friends[i] + ', ';
+//   }
+// }
+// console.log(string);
+
+// for (const friend of friends) {
+//   string += friend + ', ';
+// }
+// console.log((string = string.slice(0, string.length - 2)));
+
+// const str = friends.join(',');
+// console.log(str);
+
+// const string = 'JavaScript';
+// let invertedString = '';
+// const words = string.split('');
+
+// for (let i = 0; i < words.length; i += 1) {
+//   words[i] = words[i].toUpperCase() === words[i] ? words[i].toLowerCase() : words[i].toUpperCase();
+// }
+// console.log(words.join(''));
+
+// for (const word of words) {
+//   invertedString += word.toLowerCase() === word ? word.toUpperCase() : word.toLowerCase();
+// }
+// console.log(invertedString);
+
+// const title = 'Top 10 benefis of React framework';
+// const normalizedTitle = title.toLowerCase();
+
+// console.log(normalizedTitle.split(' ').join('-'));
+
+// const array1 = [5, 10, 15, 20];
+// const array2 = [10, 20, 30];
+// let total = 0;
+// const sum = [...array1, ...array2];
+// for (const item of sum) {
+//   total += item;
+// }
+// console.log(total);
+// console.table(sum);
+
+// const cards = ['Карточка-1', 'Карточка-2', 'Карточка-3', 'Карточка-4', 'Карточка-5'];
+
+// const cardToRemove = 'Карточка-3';
+
+//  splice() - деструктивный метод**********************
+// cards.splice(cards.indexOf(cardToRemove), 1); //удаление
+// console.log(cards);
+
+// const cardToInsert = 'Карточка-6';
+// const index = 3;
+// cards.splice(index, 0, cardToInsert); //добавление по индексу
+// console.log(cards);
+
+// const cardToUpdate = 'Карточка-4';
+// const index = 0;
+
+// cards.splice(index, 1, cardToUpdate); // обновление по индексу
+// console.log(cards);
+
+// const fnA = function () {
+//   console.log('Выполняется функция А');
+//   fnB();
+// };
+
+// const fnB = function () {
+//   console.log('Выполянется функция В');
+//   fnC();
+// };
+
+// const fnC = function () {
+//   console.log('Выполянетсяя функция С');
+//   console.log(value);
+// };
+// fnA();
+
+// const cart = [54, 28, 105, 78, 92, 17, 120];
+
+// const calculateTotalPrice = function (item) {
+//   let total = 0;
+//   for (const el of item) {
+//     total += el;
+//   }
+//   return total;
+// };
+
+// console.log(calculateTotalPrice(cart));
+
+// const logins = ['m4ngoDog', 'k1widab3st', 'poly1scute', 'aj4xth3m4n'];
+// const loginToFind = 'poly1scute';
+
+// const findLogin = function (alllogins, login) {
+//   let message = ``;
+//   message = alllogins.includes(login)
+//     ? `Пользallователь ${login} найден`
+//     : `Пользователь ${login} не найден `;
+
+//   return console.log(message);
+// };
+
+// findLogin(logins, loginToFind);
+
+// const numbers = [51, 18, 13, 24, 7, 85, 19];
+
+// console.log('Наименьшее число в массиве', Math.min(...numbers));
+
+// const findSmallesNumber = function (allnumbers) {
+//   let minNumber = allnumbers[0];
+//   for (const number of allnumbers) {
+//     if (minNumber > number) {
+//       minNumber = number;
+//     }
+//   }
+//   return minNumber;
+// };
+// console.log(findSmallesNumber(numbers));
+
+// const fn = function (...args) {
+//   let total = 0;
+//   for (const number of args) {
+//     total += number;
+//   }
+//   return total;
+// };
+
+// console.log(fn(1, 2, 44, 56, 77, 65, 42));
+
+// const filterNumbers = function (array, ...restNumbers) {
+//   const filterArray = [];
+//   for (const number of restNumbers) {
+//     if (array.includes(number)) {
+//       filterArray.push(number);
+//     }
+//   }
+//   return filterArray;
+// };
+
+// console.log(filterNumbers([1, 2, 3, 4, 5], 10, 15, 2, 3, 8));
+// console.log(filterNumbers([10, 15, 25, 30], 23, 30, 18, 15));
+// console.log(filterNumbers([100, 200, 300, 400, 500], 7, 12, 200, 64));
+
+// Занятие 5 *****************************************
+// const playlist = {
+//   name: 'Мой супер плейлист',
+//   rating: 5,
+//   tracks: ['трек-1', 'трек-2', 'трек-3'],
+//   trackCount: 3,
+
+//   changeName(newName) {
+//     this.name = newName;
+//   },
+//   addTracks(track) {
+//     this.tracks.push(track);
+//     this.trackCount += 1;
+//   },
+//   updateRating(upRating) {
+//     this.rating = upRating;
+//   },
+// };
+// console.log(playlist);
+
+// playlist.changeName('Новое имя плейлиста');
+// playlist.addTracks('трек-4');
+// playlist.updateRating(8);
+
+// console.log(playlist);
+
+// const friends = [
+//   { name: 'Mango', online: false },
+//   { name: 'Kiwi', online: true },
+//   { name: 'Poly', online: true },
+//   { name: 'Ajax', online: false },
+// ];
+
+// console.table(friends);
+
+// const findFriendByName = function (allFriends, name) {
+//   for (const friend of allFriends) {
+//     if (friend.name === name) {
+//       return `Имя ${name} найдено.`;
+//     }
+//   }
+//   return `Имя ${name} не найдено.`;
+// };
+// console.log(findFriendByName(friends, 'Poly'));
+// console.log(findFriendByName(friends, 'Chelsy'));
+
+// const getAllNames = function (allFriends) {
+//   const names = [];
+//   for (const friend of allFriends) {
+//     names.push(friend.name);
+//   }
+//   return names;
+// };
+// console.log(getAllNames(friends));
+
+// const getOnlineFriends = function (allfriends) {
+//   let friendsOnline = [];
+//   for (const friend of allfriends) {
+//     if (friend.online) {
+//       friendsOnline.push(friend);
+//     }
+//   }
+//   return friendsOnline;
+// };
+// console.log(getOnlineFriends(friends));
+
+// const getFriendsByOnlineStatus = function (allfriends) {
+//   const friendsByStatus = {
+//     online: [],
+//     offline: [],
+//   };
+//   for (const friend of allfriends) {
+//     if (friend.online) {
+//       friendsByStatus.online.push(friend);
+//       continue;
+//     }
+//     friendsByStatus.offline.push(friend);
+//   }
+
+//   return friendsByStatus;
+// };
+// console.log(getFriendsByOnlineStatus(friends));
+
+//
+
+/*
+Работаем с коллекцией товаров в корзине:
+-getItems(); //возвращает значение массива  объектов items
+-add(product); //добавляет продукт в корзину
+-remove(productName); // удаляет продукт из корзины по имени товара
+-clear(); // очистить корзину товаров
+-countTotalPrice(); // общая сумма товаров в корзине 
+-increaseQuantity(productName); //увеличить кол-во товаров в корзине
+-decreaseQuantity(productName); //уменьшить кол-во товаров в корзине
+
+{ name: '🍎', price: 50 }
+{ name: '🍇', price: 70 }
+{ name: '🍋', price: 60 }
+{ name: '🍓', price: 110 }
+
+*/
+
+// const cart = {
+//   items: [],
+//   getItems() {
+//     return this.items;
+//   },
+
+//   add(product) {
+//     const { items } = this;
+
+//     for (let i = 0; i < items.length; i += 1) {
+//       if (items[i].name === product.name) {
+//         items[i].quantity += 1;
+//         return;
+//       }
+//     }
+
+//     const newProduct = { ...product, quantity: 1 };
+//     items.push(newProduct);
+//   },
+//   remove(productName) {
+//     const { items } = this;
+//     for (let i = 0; i < items.length; i += 1) {
+//       const { name } = items[i];
+//       //   console.log(this.items[i]);
+//       if (name === productName) {
+//         items.splice(i, 1);
+//       }
+//     }
+//   },
+//   clear() {
+//     this.items = [];
+//   },
+//   countTotalPrice() {
+//     const { items } = this;
+//     let totalPrice = 0;
+//     for (const { price, quantity } of items) {
+//       totalPrice += price * quantity;
+//     }
+//     return totalPrice;
+//   },
+// };
+
+// // console.table(cart.getItems());
+
+// cart.add({ name: '🍎', price: 50 });
+// cart.add({ name: '🍋', price: 60 });
+// cart.add({ name: '🍋', price: 60 });
+// cart.add({ name: '🍓', price: 110 });
+
+// console.table(cart.getItems());
+// console.log(cart.countTotalPrice());
+// cart.remove('🍓');
+// console.table(cart.getItems());
+// // cart.clear();
+// console.log(cart);
+//******************************************************* */
+//******************************************************* */
+//******************************************************* */
+//******************************************************* */
+
+// const numbers = [1, 2, 3, 4].concat([6, 5, 4], [10, 11, 12]);
+// console.log(numbers);
+// const numbers = [0, 5, 10, ...[54, 66, 7], 54, 21];
+// console.log(numbers);
+
+// const a = { x: 2 };
+// const b = { y: 3 };
+// const c = { z: 50 };
+// Object.assign(c, a, b);
+// console.log(c);
+
+// const playlist = {
+//   name: 'Мой супер плейлист',
+//   rating: 5,
+//   tracks: ['трек-1', 'трек-2', 'трек-3'],
+//   trackCount: 3,
+// };
+
+// const { rating, tracks: numberOfTracks = 0, name, trackCount } = playlist;
+
+// console.log(rating);
+// console.log(numberOfTracks);
+// console.log(name);
+// console.log(trackCount);
+
+// console.log(rating, numberOfTracks, name, trackCount);
+
+// const authors = {
+//   kiwi: 4,
+//   avax: 5,
+//   sergy: 6,
+//   mango: 8,
+// };
+
+// const entries = Object.entries(authors);
+
+// for (const [name, rating] of entries) {
+//   // const [name, rating] = entry;
+//   console.log(name, rating);
+// }
+
+// const profile = {
+//   name: 'Jacques Gluke',
+//   tag: 'jgluke',
+//   location: 'Ocho Rios, Jamaica',
+//   avatar: 'https://s3.amazonaws.com/uifaces/faces/twitter/r_oy/128.jpg',
+//   stats: {
+//     followers: 5603,
+//     views: 4827,
+//     likes: 1308,
+//   },
+// };
+
+// const { name, tag, location, ...obj } = profile;
+// console.log(obj);
+
+// const fn = function ({ name, tag, location, avatar, stats: { followers, views, likes } }) {
+//   console.log(name, tag, location, avatar, followers, views, likes);
+// };
+
+// fn(profile);
+
+// const fnA = function (message, callback) {
+//   console.log(message);
+
+//   // console.log(callback);
+//   callback(100);
+// };
+
+// const fnB = function (number) {
+//   console.log('Это лог при вызове fnB', number);
+// };
+
+// fnA('qweqwe', fnB);
+
+// const doMath = function (a, b, callback) {
+//   const result = callback(a, b);
+//   console.log(result);
+// };
+
+// const add = function (x, y) {
+//   return x + y;
+// };
+// const sub = function (x, y) {
+//   return x - y;
+// };
+
+// doMath(4, 5, add);
+// doMath(10, 8, sub);
+// doMath(3, 4, (q, w) => q * w);
+
+// const callback = function () {
+//   console.log('Через 2 секунды внутри колбека в таймауте');
+// };
+
+// console.log('В начале кода');
+// setTimeout(callback, 2000);
+// console.log('В коде после таймаута');
+
+// const filter = function (array, test) {
+//   const filterArray = [];
+//   for (const el of array) {
+//     if (test(el)) {
+//       filterArray.push(el);
+//     }
+//   }
+//   return filterArray;
+// };
+
+// const callback1 = function (value) {
+//   return value >= 3;
+// };
+
+// const r1 = filter([1, 2, 3, 4, 5, 6, 7, 8], callback1);
+// console.log(r1);
+
+// const r2 = filter([1, 2, 3, 4, 5, 6, 7, 8], value => value <= 4);
+// console.log(r2);
+
+// const fruits = [
+//   { name: 'apples', quantity: 200, isFresh: true },
+//   { name: 'grapes', quantity: 150, isFresh: false },
+//   { name: 'bananas', quantity: 100, isFresh: true },
+// ];
+
+// const r4 = filter(fruits, value => value.quantity >= 150);
+// console.table(r4);
+
+// const fnA = function (parameter) {
+//   const innerVariable = 'значение внутренней переменной функции  fnA';
+
+//   const innerFunction = function (x = 1) {
+//     console.log((parameter = parameter * x));
+//     console.log(innerVariable);
+//     console.log('Это вызов innerFunction');
+//   };
+
+//   return innerFunction;
+// };
+
+// const fnB = fnA(555);
+// fnB(2);
+// console.log(fnB);
+
+// const fnC = fnA(2);
+// fnC(3);
+// console.log(fnC);
+
+// const makeSheff = function (name) {
+//   const makeDish = function (dish) {
+//     console.log(`${name} готовит ${dish}.`);
+//   };
+//   return makeDish;
+// };
+
+// const mango = makeSheff('Mango');
+// mango('супчик');
+// mango('котлетки');
+
+// const poly = makeSheff('Poly');
+// poly('макарошки');
+// poly('пирожок');
+// console.dir(poly);
+
+// const rounder = function (places) {
+//   return function (number) {
+//     return Number(number.toFixed(places));
+//   };
+// };
+// const rounder2 = rounder(2);
+// console.log(rounder2(2.5488));
+
+// const myLibFactory = function () {
+//   let value = 0;
+//   const add = function (num) {
+//     value += num;
+//   };
+
+//   return {
+//     add: add,
+//     getValue() {
+//       return value;
+//     },
+//   };
+// };
+
+// const myLib = myLibFactory();
+// console.log(myLib);
+// console.log(myLib.getValue());
+// myLib.add(15);
+// console.log(myLib.getValue());
+// myLib.add(-3);
+// console.log(myLib.getValue());
+
+// const salaryManagerFactory = function (employeeName, baseSalary = 0) {
+//   let salary = baseSalary;
+
+//   return {
+//     raise(amount) {
+//       salary += amount;
+//     },
+//     lower(amount) {
+//       salary -= amount;
+//     },
+//     current() {
+//       return `Текущая зарплата ${employeeName} - ${salary}`;
+//     },
+//   };
+// };
+
+// const salaryManager = salaryManagerFactory('Mango', 5000);
+// console.log(salaryManager.current());
+// salaryManager.lower(100);
+// console.log(salaryManager.current());
+// salaryManager.raise(1000);
+// console.log(salaryManager.current());
+
+// const add = function (a, b, c) {
+//   console.log(a, b, c);
+//   return a + b + c;
+// };
+
+// console.log(add(5, 10, 15));
+
+// const addArrow = (a, b, c) => a + b + c;
+
+// const add = (a, b) => ({ a, b });
+// console.log(add(4, 5));
+
+// const func = function (a, b, c, d) {
+//   console.log(arguments);
+//   const arg = [...arguments];
+//   console.log(arg);
+// };
+
+// func(1, 2, 3, 4, 5, 6);
+
+// Module 4 lesson 8**************************
+
+// const user = {
+//   tag: 'Mango',
+//   showTag() {
+//     console.log('showTag -> this', this);
+//     console.log('showTag -> this.tag', this.tag);
+//   },
+// };
+
+// //user.showTag();
+
+// const invokeAction = function (action) {
+//   console.log(action);
+//   action();
+// };
+
+// invokeAction(user.showTag);
+
+// const counter = {
+//   value: 0,
+//   increment(value) {
+//     console.log('increment -> this', this);
+//     this.value += value;
+//   },
+//   decrement(value) {
+//     console.log('decrement -> this', this);
+//     this.value -= value;
+//   },
+// };
+// const updateCounter = function (value, operation) {
+//   operation(value);
+// };
+
+// updateCounter(10, counter.increment);
+// updateCounter(5, counter.decrement);
+
+// const showThis = function () {
+//   console.log('showThis -> this', this);
+// };
+
+// showThis();
+
+// const objA = {
+//   a: 5,
+//   b: 10,
+// };
+
+// showThis.call(objA);
+
+// const changeColor = function (color) {
+//   console.log(this.color);
+//   this.color = color;
+//   console.log(this);
+// };
+
+// const hat = {
+//   color: 'green',
+// };
+
+// const sweter = {
+//   color: 'black',
+// };
+
+// changeColor.call(hat, 'blue');
+// console.log(hat);
+
+// changeColor.call(sweter, 'tomato');
+// console.log(sweter);
+
+// const changeHatColor = changeColor.bind(hat);
+
+// changeHatColor('orange');
+
+// const objC = {
+//   z: 5,
+// };
+
+// console.log(objC);
+// console.log(objC.hasOwnProperty('z'));
+
+// const objB = Object.create(objC);
+// objB.y = 2;
+
+// console.log(objB);
+// console.log(objB.y);
+// console.log(objB.z);
+
+// const objA = Object.create(objB);
+// objA.x = 1;
+
+// console.log('objA:', objA);
+
+// console.log(objA.hasOwnProperty('z'));
+
+// const dummyObj = Object.create({
+//   message: 'Это  свойство прототипа',
+// });
+
+// dummyObj.message = 'Это собственное свойство объекта';
+// console.log(dummyObj);
+
+// const Car = function ({ brand, model, price } = {}) {
+//   // const { brand, model, price } = config;
+//   this.brand = brand;
+//   this.model = model;
+//   this.price = price;
+
+//   this.changePrice = function (newPrice) {
+//     this.price = newPrice;
+//   };
+// };
+// Car.prototype.sayHi = function () {
+//   console.log(this);
+//   console.log('Hello!!');
+// };
+// console.log(Car.prototype);
+
+// const myCar = new Car({ brand: 'audi', model: 'O3', price: 50000 });
+// // console.log(myCar);
+// myCar.sayHi();
+
+// const myCar2 = new Car({ brand: 'BMW', model: 'X5', price: 35000 });
+// // console.log(myCar2);
+// myCar2.sayHi();
+
+// const myCar3 = new Car({ brand: 'Audi', model: 'A6', price: 65000 });
+// // console.log(myCar3);
+// myCar3.sayHi();
+
+// myCar3.changePrice(400);
+// console.log(myCar3);
+
+// const User = function ({ email, password } = {}) {
+//   this.email = email;
+//   this.password = password;
+// };
+
+// User.prototype.changeEmail = function (newEmail) {
+//   this.email = newEmail;
+// };
+
+// User.log = function (obj) {
+//   console.log('email', obj.email);
+//   console.log('password', obj.password);
+// };
+
+// User.Pi = 3.1415;
+
+// const mango = new User({ email: 'mymail@ukr.net', password: 1111111 });
+// console.log(User.Pi);
+
+// mango.changeEmail('newmail@gmail.com');
+// // console.dir(mango);
+// // console.log(User);
+// // User.log(mango);
+// console.dir(User);
+
+// class Car1 {
+//   static sayHi = 'Hello!!!';
+//   static getLog(obj) {
+//     console.log('Это свойства объекта', obj);
+//   }
+//   #test = 'test';
+
+//   constructor({ brand, model, price } = {}) {
+//     this.brand = brand;
+//     this.model = model;
+//     this._price = price;
+
+//     // this.changePrice = function (newPrice) {
+//     //   this.price = newPrice;
+//     // };
+//   }
+
+//   changeModel(newModel) {
+//     this.model = newModel;
+//   }
+//   get price() {
+//     return this._price;
+//   }
+//   set price(newPrice) {
+//     return (this._price = newPrice);
+//   }
+// }
+// const carInstance = new Car1({ brand: 'audi', model: 'O3', price: 50000 });
+// console.log(carInstance);
+// // console.log(Car1.sayHi);
+// // Car1.getLog(carInstance);
+// // console.log(carInstance.test);
+// // carInstance.changePrice(1000);
+
+// console.log(carInstance.price);
+// carInstance.price = 500000;
+// console.log(carInstance);
+
+// const obj = {
+//   _a: 100,
+//   b: 50,
+//   get a() {
+//     return this._a;
+//   },
+//   set a(newA) {
+//     return (this._a = newA);
+//   },
+// };
+
+// console.log(obj);
+// console.log(obj.a);
+// console.log(obj.b);
+// obj.a = 150;
+// obj.b = 55;
+// console.log(obj.a);
+// console.log(obj.b);
+
+// class Hero {
+//   constructor({ name = 'hero', xp = 0 } = {}) {
+//     this.name = name;
+//     this.xp = xp;
+//   }
+
+//   gainXp(amount) {
+//     console.log(`${this.name} получает ${amount} опыта`);
+//     this.xp += amount;
+//   }
+// }
+
+// // const defaul = new Hero();
+
+// // console.log(defaul);
+
+// class Warrior extends Hero {
+//   constructor({ weapon, ...rest } = {}) {
+//     super(rest);
+//     this.weapon = weapon;
+//   }
+
+//   attack() {
+//     console.log(`${this.name} атакует используя ${this.weapon}`);
+//   }
+// }
+
+// class Mag extends Hero {
+//   constructor({ spells, ...rest } = {}) {
+//     super(rest);
+//     this.spells = spells;
+//   }
+
+//   cast() {
+//     console.log(`${this.name} кастует используя ${this.spells}`);
+//   }
+// }
+
+// const mango = new Warrior({ name: 'mango', xp: 1000, weapon: 'алебарда' });
+// console.log(mango);
+
+// mango.gainXp(5000);
+// mango.attack();
+
+// const poly = new Mag({ name: 'Poly', xp: 400, spells: ['Файерболл', 'Огонь'] });
+// console.log(poly);
+// poly.cast();
+
+// const numbers = [1, 2, 3, 4, 5, 6];
+// const filteredNumbers = [];
+
+// for (const number of numbers) {
+//   if (number > 3) {
+//     filteredNumbers.push(number);
+//   }
+// }
+// console.log(filteredNumbers);
+
+// const filteredNumbers2 = numbers.filter(value => value > 3);
+// console.log(filteredNumbers2);
+
+// const dirtyMultiply = (array, value) => {
+//   for (let i = 0; i < array.length; i++) {
+//     array[i] = array[i] * value;
+//   }
+// };
+// const numbers = [1, 2, 3, 4, 5, 6];
+// dirtyMultiply(numbers, 4);
+// console.log(numbers);
+
+// Перебирающте методы**************************
+
+// const numbers = [1, 2, 3, 4, 5, 6];
+
+// // for (let i = 0; i < numbers.length; i++) {
+// //   console.log(numbers[i]);
+// // }
+
+// numbers.forEach(num => console.log(num));
+
+// numbers.forEach((num, idx) => console.log(`index ${idx}, value ${num}`));
+
+// function Counter() {
+//   this.sum = 0;
+//   this.count = 0;
+// }
+// Counter.prototype.add = function (array) {
+//   array.forEach(entry => {
+//     this.sum += entry;
+//     this.count += 1;
+//   }, this);
+//   // ^---- Note
+// };
+
+// const obj = new Counter();
+// console.log(obj.add);
+// obj.add([2, 5, 9]);
+// obj.count;
+// // 3
+// obj.sum;
+// // 16
+
+// const numbers = [1, 2, 3, 4, 5, 6];
+
+// const doubleNumbers = numbers.map(number => number * 2);
+// console.log(doubleNumbers);
+
+// const users = [
+//   { name: 'Mango', isActive: true },
+//   { name: 'Poly', isActive: false },
+//   { name: 'Ajax', isActive: true },
+// ];
+
+// // const names = users.map(user => user.name);
+// // console.log(names);
+
+// const numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 0];
+
+// console.log(numbers.filter(number => (number > 2) & (number < 6)));
+
+// const userOnline = users.filter(user => user.isActive);
+// console.log(userOnline);
+
+// const numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 0];
+
+// const users = [
+//   { id: '001', name: 'Mango', isActive: true },
+//   { id: '002', name: 'Poly', isActive: false },
+//   { id: '003', name: 'Ajax', isActive: true },
+//   { id: '004', name: 'Chelsey', isActive: false },
+// ];
+
+// console.log(numbers.filter(number => number === 3));
+
+// console.log(users.filter(user => user.id === '004'));
+
+// const getByUser = (arr, id) => arr.filter(user => user.id === id);
+// console.log(getByUser(users, '003'));
+
+// const isBigEnough = val => val >= 10;
+
+// console.log([12, 5, 8, 130, 44].every(isBigEnough));
+// console.log([12, 5, 8, 130, 44].some(isBigEnough));
+
+// const fruits = [
+//   { name: 'apples', amount: 100 },
+//   { name: 'bananas', amount: 0 },
+//   { name: 'grapes', amount: 50 },
+// ];
+
+// console.log(fruits.every(fruit => fruit.amount > 0));
+// console.log(fruits.some(fruit => fruit.amount > 0));
+
+// const numbers = [1, 2, 3, 4, 5];
+
+// const summ = numbers.reduce((acc, value) => acc + value, 0);
+// console.log(summ);
+
+// const tweets = [
+//   { id: '000', likes: 5, tags: ['js', 'nodejs'] },
+//   { id: '001', likes: 2, tags: ['html', 'css'] },
+//   { id: '002', likes: 17, tags: ['html', 'js', 'nodejs'] },
+//   { id: '003', likes: 8, tags: ['css', 'react'] },
+//   { id: '004', likes: 0, tags: ['js', 'nodejs', 'react'] },
+// ];
+
+// console.log(tweets.reduce((acc, value) => acc + value.likes, 0));
+// ////!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+// const allTags = tweets.reduce((tags, el) => [...tags, ...el.tags], []);
+// console.log(allTags);
+// ///////!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+// const tags = tweets.reduce((AllTags, tweet) => {
+//   AllTags.push(...tweet.tags);
+//   return AllTags;
+// }, []);
+// console.log(tags);
+
+// const getTags = tweets => tweets.reduce((tags, el) => [...tags, ...el.tags], []);
+
+// console.log(getTags(tweets));
+
+// const getTagStats = (acc, tag) => {
+//   if (!acc.hasOwnProperty(tag)) {
+//     acc[tag] = 0;
+//   }
+//   acc[tag] += 1;
+//   return acc;
+// };
+
+// const countTags = tags => tags.reduce(getTagStats, {});
+
+// const tagCount = countTags(tags);
+// console.log(tagCount);
+
+// const numbers = [2, 5, 8, 3, 5, 1, 6];
+
+// console.log('before sort:', numbers);
+// console.log('after sort', numbers.sort());
+
+// const clients = ['Mango', 'Ajax', 'Poly', 'Chelsey'];
+
+// console.log('Before sort: ', clients);
+// console.log('After sort: ', clients.sort());
+
+// const users = [
+//   { name: 'Mango', daysActive: 15 },
+//   { name: 'Poly', daysActive: 4 },
+//   { name: 'Ajax', daysActive: 27 },
+//   { name: 'Chelsey', daysActive: 2 },
+// ];
+// const sortByDaysActive = users.sort((a, b) => a.daysActive - b.daysActive);
+// console.log(sortByDaysActive);
+
+// const players = [
+//   { id: 'player-1', name: 'Mango', timePlay0ed: 310, points: 54, online: false },
+//   { id: 'player-2', name: 'Poly', timePlay0ed: 470, points: 92, online: true },
+//   { id: 'player-3', name: 'Kiwi', timePlay0ed: 230, points: 47, online: true },
+//   { id: 'player-4', name: 'Ajax', timePlay0ed: 150, points: 71, online: false },
+//   { id: 'player-5', name: 'Chelsey', timePlay0ed: 80, points: 48, online: true },
+// ];
+// console.table(players);
+// const playersName = players.map(player => player.name);
+// console.log('playersName', playersName);
+
+// const res = players.map(({ name: userName, online: isOnline }) => ({ userName, isOnline }));
+// console.log('res', res);
+
+// const updatedPlayers = players.map(player => {
+//   console.log(player);
+//   return { ...player, points: Math.round(player.points * 1.1) };
+// });
+
+// // console.log('updatePlayers:', updatedPlayers);
+// const playerIdToUpdate = 'player-3';
+
+// // const updatePlayers3 = players.map(player => {
+// //   if (player.id === playerIdToUpdate) {
+// //     return { ...player, points: player.points + 100 };
+// //   }
+// //   return player;
+// // });
+
+// const updatePlayers3 = players.map(player =>
+//   player.id === playerIdToUpdate ? { ...player, points: player.points + 100 } : player,
+// );
+
+// console.log(updatePlayers3);
+// const numbers = [5, 10, 15, 20, 25];
+
+// const filteredNumbers = numbers.filter(number => number >= 15);
+// console.log(filteredNumbers);
+
+// const players = [
+//   { id: 'player-1', name: 'Mango', timePlayed: 310, points: 54, online: false },
+//   { id: 'player-2', name: 'Poly', timePlayed: 470, points: 92, online: true },
+//   { id: 'player-3', name: 'Kiwi', timePlayed: 230, points: 47, online: true },
+//   { id: 'player-4', name: 'Ajax', timePlayed: 150, points: 71, online: false },
+//   { id: 'player-5', name: 'Chelsey', timePlayed: 80, points: 48, online: true },
+// ];
+// console.table(players);
+
+// const playersIsOnline = players.filter(player => player.online);
+// console.log('playersIsOnline', playersIsOnline);
+
+// const hardcorePlayers = players.filter(({ timePlayed }) => timePlayed > 250);
+
+// console.log('hardcorePlayers', hardcorePlayers);
+
+// const findPlayerById = (allPlayer, playerId) => {
+//   return allPlayer.find(player => player.id === playerId);
+// };
+
+// console.log(findPlayerById(players, 'player-4'));
+
+// const isAllOnline = players.every(player => player.online);
+// console.log('isAllOnline', isAllOnline);
+
+// const numbers = [5, 10, 15, 20, 25];
+// console.log(numbers);
+
+// const total = numbers.reduce((acc, number) => acc + number, 0);
+
+// console.log(total);
+
+// const salary = {
+//   mango: 100,
+//   pole: 50,
+//   ajax: 150,
+// };
+
+// console.log(Object.values(salary));
+// const totalSalary = Object.values(salary).reduce((total, employ) => total + employ, 0);
+// console.log(totalSalary);
+
+// const players = [
+//   { id: 'player-1', name: 'Mango', timePlayed: 310, points: 54, online: false },
+//   { id: 'player-2', name: 'Poly', timePlayed: 470, points: 92, online: true },
+//   { id: 'player-3', name: 'Kiwi', timePlayed: 230, points: 47, online: true },
+//   { id: 'player-4', name: 'Ajax', timePlayed: 150, points: 71, online: false },
+//   { id: 'player-5', name: 'Chelsey', timePlayed: 80, points: 48, online: true },
+// ];
+// console.table(players);
+
+// const totalTimePlayed = players.reduce((totalTime, value) => totalTime + value.timePlayed, 0);
+
+// console.log(totalTimePlayed);
+
+// const cart = [
+//   { label: 'Apples', price: 100, quantity: 2 },
+//   { label: 'Bananas', price: 120, quantity: 3 },
+//   { label: 'Lemons', price: 70, quantity: 4 },
+// ];
+
+// // const totalAmount = cart.reduce(
+// //   (totalPrice, product) => totalPrice + product.price * product.quantity,
+// //   0,
+// // );
+// const totalAmount = cart.reduce(
+//   (totalPrice, { price, quantity }) => totalPrice + price * quantity,
+//   0,
+// );
+// console.log('totalAmount', totalAmount);
+
+// const tweets = [
+//   { id: '000', likes: 5, tags: ['js', 'nodejs'] },
+//   { id: '001', likes: 2, tags: ['html', 'css'] },
+//   { id: '002', likes: 17, tags: ['html', 'js', 'nodejs'] },
+//   { id: '003', likes: 8, tags: ['css', 'react'] },
+//   { id: '004', likes: 0, tags: ['js', 'nodejs', 'react'] },
+// ];
+
+// const allTags = tweets.reduce((tags, tweet) => [...tags, ...tweet.tags], []);
+
+// console.log(allTags);
+
+// const tagsStats = allTags.reduce((acc, tag) => {
+//   console.log(acc[tag]);
+//   if (acc.hasOwnProperty(tag)) {
+//     acc[tag] += 1;
+//     return acc;
+//   }
+//   acc[tag] = 1;
+//   return acc;
+// }, {});
+
+// const tagsStats = allTags.reduce((acc, tag) => {
+//   if (acc.hasOwnProperty(tag)) {
+//     // acc[tag] += 1;
+//     return {
+//       ...acc,
+//       [tag]: acc[tag] + 1,
+//     };
+//   }
+//   return {
+//     ...acc,
+//     [tag]: 1,
+//   };
+// }, {});
+
+// const tagsStats = allTags.reduce((acc, tag) => {
+//   return {
+//     ...acc,
+//     [tag]: acc[tag] ? acc[tag] + 1 : 1,
+//   };
+// }, {});
+
+// console.log(tagsStats);
+
+// const numbers = [2, 7, 1, 45, 87, 4, 45, 24];
+
+// const sortedNumbers = [...numbers].sort((a, b) => a - b);
+
+// console.log('sortedNumbers', sortedNumbers);
+
+// console.log('numbers', numbers);
+
+// const abc = ['B', 'a', 'b', 'A'];
+
+// console.log([...abc].sort((a, b) => a - b));
+
+// const players = [
+//   { id: 'player-1', name: 'Mango', timePlayed: 310, points: 54, online: false },
+//   { id: 'player-2', name: 'Poly', timePlayed: 470, points: 92, online: true },
+//   { id: 'player-3', name: 'Kiwi', timePlayed: 230, points: 47, online: true },
+//   { id: 'player-4', name: 'Ajax', timePlayed: 150, points: 71, online: false },
+//   { id: 'player-5', name: 'Chelsey', timePlayed: 80, points: 48, online: true },
+// ];
+// console.table(players);
+
+// const sortByBestPlayers = [...players].sort((cur, next) => cur.timePlayed - next.timePlayed);
+// console.table(sortByBestPlayers);
+
+// const tweets = [
+//   { id: '000', likes: 5, tags: ['js', 'nodejs'] },
+//   { id: '001', likes: 2, tags: ['html', 'css'] },
+//   { id: '002', likes: 17, tags: ['html', 'js', 'nodejs'] },
+//   { id: '003', likes: 8, tags: ['css', 'react'] },
+//   { id: '004', likes: 0, tags: ['js', 'nodejs', 'react'] },
+// ];
+
+// const tags = tweets.map(val => val.tags).flat();
+// const tag2 = tweets.flatMap(t => t.tags);
+
+// console.table(tweets);
+// console.table(tags);
+// console.log(tag2);
+
+// const players = [
+//   { id: 'id-1', tag: 'Mango', isOnline: true, rank: 800 },
+//   { id: 'id-2', tag: 'Poly', isOnline: false, rank: 600 },
+//   { id: 'id-3', tag: 'Ajax', isOnline: true, rank: 100 },
+//   { id: 'id-4', tag: 'Kiwi', isOnline: true, rank: 400 },
+// ];
+
+// const onlineAndSortedByRank = players
+//   .filter(player => player.isOnline)
+//   .sort((prev, next) => prev.rank - next.rank);
+// console.log(onlineAndSortedByRank);
+
+// const element = {
+//   class: '',
+//   hovered: false,
+//   changeClass(cls) {
+//     this.class = cls;
+//     return this;
+//   },
+//   toggleHovered() {
+//     this.hovered = !this.hovered;
+//     return this;
+//   },
+// };
+
+// element.toggleHovered(); //.changeClass('click');
+// element.changeClass('click');
+
+// console.log(element);
+
+// const players = [
+//   { id: 'id-1', tag: 'Mango', isOnline: true, rank: 800 },
+//   { id: 'id-2', tag: 'Poly', isOnline: false, rank: 600 },
+//   { id: 'id-3', tag: 'Ajax', isOnline: true, rank: 100 },
+//   { id: 'id-4', tag: 'Kiwi', isOnline: true, rank: 400 },
+// ];
+
+// console.log(_.map(players, val => val.id));
+
+// console.log(_.union([1, 2, 3, 4, 5], [3, 4, 5, 6, 7]));
+
+// console.log(_.range(10, 20, 3));
