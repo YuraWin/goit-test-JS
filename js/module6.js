@@ -166,10 +166,10 @@ const users = [
 
 // console.log(getSortedUniqueSkills(users));
 
-const getSortedUniqueSkills = array =>
-  array
-    .reduce((acc, obj) => [...acc, ...obj.skills], [])
-    .filter((skill, index, obj) => obj.indexOf(skill) === index)
-    .sort();
+// const getSortedUniqueSkills = array =>
+//   array
+//     .reduce((acc, obj) => [...acc, ...obj.skills], [])
+//     .filter((skill, index, obj) => obj.indexOf(skill) === index)
+//     .sort();
 
-console.log(getSortedUniqueSkills(users));
+// console.log(getSortedUniqueSkills(users));

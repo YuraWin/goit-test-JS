@@ -2642,3 +2642,79 @@
 // console.log(_.union([1, 2, 3, 4, 5], [3, 4, 5, 6, 7]));
 
 // console.log(_.range(10, 20, 3));
+
+// *********************************************************
+// *********************************************************
+// *********************************************************
+// *********************************************************
+
+// const selectedById = document.querySelector('#menu');
+// selectedById.style.textTransform = 'uppercase';
+// selectedById.style.fontSize = '2rem';
+// console.log(selectedById);
+
+// const menuItemByTagName = document.querySelectorAll('li');
+// console.log(menuItemByTagName);
+
+// const menuItemsByClass = document.querySelectorAll('.menu-item');
+// console.log(menuItemsByClass);
+
+// const firstMenuItem = document.querySelector('.menu-item');
+// firstMenuItem.style.color = 'blue';
+// console.log(firstMenuItem);
+// ************************************************************
+
+// const text = document.getElementById('text');
+// text.hidden = true;
+// console.log(text);
+
+// const message = document.querySelector('#message');
+// console.log(message.value);
+// console.log(message.name);
+
+// const link = document.querySelector('.active');
+// console.log(link.href);
+
+// const image = document.querySelector('.image');
+// console.log(image.src);
+// image.src = 'https://placeimg.com/640/480/tech';
+// ****************************************************
+// document.querySelector('body').style.padding = '1rem';
+
+// const text = document.querySelector('.article-text');
+// console.log(text.textContent);
+
+// const title = document.querySelector('.article-title');
+// console.log(title.textContent);
+// title.textContent = 'Wellcome to Zhitomir!!';
+
+// const button = document.querySelector('.btn');
+
+// button.style.backgroundColor = 'tomato';
+// console.log(button.style);
+// ****************************************************
+const elem = document.querySelector('#paragraph');
+
+console.log(elem.classList);
+console.log(elem.classList.contains('red'));
+
+elem.classList.remove('big');
+console.log(elem.classList);
+
+elem.classList.add('new-class');
+console.log(elem.classList);
+
+elem.classList.add('a', 'b', 'c');
+console.log(elem.classList);
+
+elem.classList.toggle('hidden');
+console.log(elem.classList);
+
+elem.classList.toggle('hidden');
+console.log(elem.classList);
+
+elem.classList.forEach(cls => console.log(cls));
+
+// ****************************************************
+// ****************************************************
+// ****************************************************
