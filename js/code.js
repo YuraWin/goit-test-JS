@@ -2646,7 +2646,7 @@
 // *********************************************************
 // *********************************************************
 // *********************************************************
-// *********************************************************
+// 1*********************************************************
 
 // const selectedById = document.querySelector('#menu');
 // selectedById.style.textTransform = 'uppercase';
@@ -2662,7 +2662,7 @@
 // const firstMenuItem = document.querySelector('.menu-item');
 // firstMenuItem.style.color = 'blue';
 // console.log(firstMenuItem);
-// ************************************************************
+// 2************************************************************
 
 // const text = document.getElementById('text');
 // text.hidden = true;
@@ -2678,7 +2678,7 @@
 // const image = document.querySelector('.image');
 // console.log(image.src);
 // image.src = 'https://placeimg.com/640/480/tech';
-// ****************************************************
+// 3****************************************************
 // document.querySelector('body').style.padding = '1rem';
 
 // const text = document.querySelector('.article-text');
@@ -2692,29 +2692,85 @@
 
 // button.style.backgroundColor = 'tomato';
 // console.log(button.style);
-// ****************************************************
-const elem = document.querySelector('#paragraph');
+// 4****************************************************
+// const elem = document.querySelector('#paragraph');
 
-console.log(elem.classList);
-console.log(elem.classList.contains('red'));
+// console.log(elem.classList);
+// console.log(elem.classList.contains('red'));
 
-elem.classList.remove('big');
-console.log(elem.classList);
+// elem.classList.remove('big');
+// console.log(elem.classList);
 
-elem.classList.add('new-class');
-console.log(elem.classList);
+// elem.classList.add('new-class');
+// console.log(elem.classList);
 
-elem.classList.add('a', 'b', 'c');
-console.log(elem.classList);
+// elem.classList.add('a', 'b', 'c');
+// console.log(elem.classList);
 
-elem.classList.toggle('hidden');
-console.log(elem.classList);
+// elem.classList.toggle('hidden');
+// console.log(elem.classList);
 
-elem.classList.toggle('hidden');
-console.log(elem.classList);
+// elem.classList.toggle('hidden');
+// console.log(elem.classList);
 
-elem.classList.forEach(cls => console.log(cls));
+// elem.classList.forEach(cls => console.log(cls));
 
-// ****************************************************
+// 5****************************************************
+// const image = document.querySelector('.image');
+// console.log(image.attributes);
+
+// console.log(image.hasAttribute('src'));
+
+// console.log(image.getAttribute('src'));
+
+// console.log(image.getAttribute('alt'));
+
+// image.setAttribute('alt', 'amazing lake and clouds');
+
+// console.log(image.getAttribute('alt'));
+
+// image.removeAttribute('alt');
+
+// console.log(image.hasAttribute('alt'));
+// 6****************************************************
+// const saveBtn = document.querySelector('.editor button[data-action="save"]');
+// const closeBtn = document.querySelector('.editor button[data-action="close"]');
+
+// console.log(saveBtn);
+// console.log(closeBtn);
+
+// const saveBtnAction = saveBtn.dataset.action;
+// console.log(saveBtnAction);
+
+// const closeBtnAction = closeBtn.dataset.action;
+// console.log(closeBtnAction);
+
+// const liElement14 = document.querySelector('.dishes li[data-id="14"]');
+// const liElement7 = document.querySelector('.dishes li[data-id="7"]');
+// const liElement3 = document.querySelector('.dishes li[data-id="3"]');
+// // const liElement61 = document.querySelector('.dishes li[data-id="61"]');
+// const liElement61 = document.querySelector('.dishes').children[3];
+
+// console.log(liElement61);
+
+// console.log(liElement14.dataset.id);
+// console.log(liElement7.dataset.id);
+// console.log(liElement3.dataset.id);
+// console.log(liElement61.dataset.id);
+
+// 7****************************************************
+const heading = document.createElement('h1');
+heading.textContent = 'This is a heading';
+console.log(heading);
+
+const image = document.createElement('img');
+image.setAttribute('src', 'https://placeimg.com/640/480/nature');
+image.setAttribute('alt', 'nature');
+console.log(image);
+
+console.log(image.hasAttribute('src'));
+
+document.querySelector('body').appendChild(heading);
+document.querySelector('body').insertBefore(image, heading);
 // ****************************************************
 // ****************************************************
