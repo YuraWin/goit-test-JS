@@ -1,0 +1,10 @@
+body {
+  padding: 1rem;
+}
+.article {
+  width: 320px;
+  margin-bottom: 32px;
+}
+.article-text {
+  color: #f26419;
+}

@@ -2759,18 +2759,95 @@
 // console.log(liElement61.dataset.id);
 
 // 7****************************************************
-const heading = document.createElement('h1');
-heading.textContent = 'This is a heading';
-console.log(heading);
+// const heading = document.createElement('h1');
+// heading.textContent = 'This is a heading';
+// console.log(heading);
 
-const image = document.createElement('img');
-image.setAttribute('src', 'https://placeimg.com/640/480/nature');
-image.setAttribute('alt', 'nature');
-console.log(image);
+// const image = document.createElement('img');
+// image.setAttribute('src', 'https://placeimg.com/320/240/nature');
+// image.setAttribute('alt', 'nature');
+// console.log(image);
 
-console.log(image.hasAttribute('src'));
+// console.log(image.hasAttribute('src'));
 
-document.querySelector('body').appendChild(heading);
-document.querySelector('body').insertBefore(image, heading);
+// document.querySelector('body').appendChild(heading);
+// document.querySelector('body').insertBefore(image, heading);
+// 8****************************************************
+// const item = document.createElement('a');
+// item.href = '#';
+// // item.setAttribute('href', '#'); //аналог обращения к атрибуту
+// // console.log(item.getAttribute('href'));
+// // console.log(item.href);
+// item.classList.add('btn');
+// item.textContent = 'item 4';
+
+// const nav = document.querySelector('.nav');
+// nav.appendChild(item);
+
+// const heading = document.createElement('h1');
+// heading.textContent = 'Nav heading';
+// const container = document.querySelector('.container');
+// container.insertBefore(heading, nav);
+
+// 9 ****************************************************
+// const list = document.querySelector('.list');
+// const item = document.createElement('li');
+// item.textContent = 'Poly';
+// list.appendChild(item);
+
+// const clone = item.cloneNode(true);
+// clone.textContent = 'Ajax';
+// list.prepend(clone);
+
+// const title = document.createElement('h1');
+// title.textContent = 'Список клиентов';
+// list.before(title);
+
+// const text = document.createElement('p');
+// text.textContent =
+//   'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eveniet numquam beatae corporis officia dolorem recusandae tempore, suscipit facilis alias temporibus, quos fugiat quo minus voluptate, aperiam nobis repudiandae omnis enim.';
+// list.after(text);
+
+// const span = document.createElement('span');
+// span.textContent = 'Change content';
+
+// text.replaceWith(span);
+
+// 10****************************************************
+// const article = document.querySelector('.article');
+
+// const text = document.querySelector('.text');
+// article.removeChild(text);
+
+// const link = document.querySelector('.link');
+// link.remove();
+//11 ****************************************************
+// const parent = document.querySelector('.parent');
+// const article = document.querySelector('.article');
+
+// const clone = article.cloneNode(true);
+// clone.classList.add('blue-text');
+// parent.appendChild(clone);
+// 12****************************************************
+// const article = document.querySelector('.article');
+// const htmlString = `<p class="article-text">Nullam quis ante. Vestibulum dapibus nunc ac augue. In consectetuer turpis ut velit.</p>
+//     <a class="link" href = '#' > Read more...</a > `;
+// article.innerHTML += htmlString;
+
+// const list = document.querySelector('.list');
+// const tech = ['HTML', 'CSS', 'JavaScript', 'React', 'Node'];
+
+// const markup = tech.reduce((string, item) => string + `<li>${item}</li>`, '');
+
+// console.log(markup);
+
+// list.innerHTML = markup;
+// 13****************************************************
+const list = document.querySelector('#list');
+console.log(list);
+
+list.insertAdjacentHTML('beforebegin', '<h2>beforebegin заголовок</h2>');
+
+// ****************************************************
 // ****************************************************
 // ****************************************************
