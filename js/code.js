@@ -2843,11 +2843,71 @@
 
 // list.innerHTML = markup;
 // 13****************************************************
-const list = document.querySelector('#list');
-console.log(list);
+// const list = document.querySelector('#list');
+// console.log(list);
 
-list.insertAdjacentHTML('beforebegin', '<h2>beforebegin заголовок</h2>');
+// list.insertAdjacentHTML('beforebegin', '<h2>beforebegin заголовок</h2>');
+// list.insertAdjacentHTML('afterbegin', '<li> afterbegin item </li>');
+// list.insertAdjacentHTML('beforeend', '<li>beforeend item</li>');
+// list.insertAdjacentHTML('afterend', '<p>afterend текст</p>');
+// list.insertAdjacentText('afterend', 'Hello I am not affray!!');
+// 14 ****************************************************
 
+// const singleBtn = document.querySelector('#single');
+
+// const handleClick = () => alert('CLICK');
+// singleBtn.addEventListener('click', handleClick);
+
+// const multiBtn = document.querySelector('#multiple');
+
+// const firstCallback = () => alert('First callback!');
+// const secondCallback = () => alert('Second callback!');
+// const thirdCallback = () => alert('Third callback');
+
+// multiBtn.addEventListener('click', firstCallback);
+// multiBtn.addEventListener('click', secondCallback);
+// multiBtn.addEventListener('click', thirdCallback);
+
+//**************** */
+// const user = {
+//   name: 'Mango',
+//   showName() {
+//     console.log(this);
+//     console.log(`My name is ${this.name}`);
+//   },
+// };
+
+// const btn = document.querySelector('.btn');
+
+// const funcThis = user.showName.bind(user);
+// btn.addEventListener('click', funcThis);
+
+// const multiBtn = document.querySelector('#multiple');
+
+// multiBtn.addEventListener('click', () => btn.removeEventListener('click', funcThis));
+
+// 15****************************************************
+const addBtn = document.querySelector('button[data-action="add"]');
+const removeBtn = document.querySelector('button[data-action="remove"]');
+const btn = document.querySelector('#btn');
+
+console.log(addBtn);
+console.log(removeBtn);
+console.log(btn);
+
+const handleClick = () => {
+  alert('CLICK EVENT LISTENER ALERT!');
+};
+
+addBtn.addEventListener('click', () => {
+  btn.addEventListener('click', handleClick);
+});
+
+removeBtn.addEventListener('click', () => {
+  btn.removeEventListener('click', handleClick);
+});
+
+// ****************************************************
 // ****************************************************
 // ****************************************************
 // ****************************************************
