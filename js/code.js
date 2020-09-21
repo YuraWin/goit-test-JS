@@ -2887,25 +2887,112 @@
 // multiBtn.addEventListener('click', () => btn.removeEventListener('click', funcThis));
 
 // 15****************************************************
-const addBtn = document.querySelector('button[data-action="add"]');
-const removeBtn = document.querySelector('button[data-action="remove"]');
-const btn = document.querySelector('#btn');
+// const addBtn = document.querySelector('button[data-action="add"]');
+// const removeBtn = document.querySelector('button[data-action="remove"]');
+// const btn = document.querySelector('#btn');
 
-console.log(addBtn);
-console.log(removeBtn);
-console.log(btn);
+// console.log(addBtn);
+// console.log(removeBtn);
+// console.log(btn);
 
-const handleClick = () => {
-  alert('CLICK EVENT LISTENER ALERT!');
-};
+// const handleClick = () => {
+//   alert('CLICK EVENT LISTENER ALERT!');
+// };
 
-addBtn.addEventListener('click', () => {
-  btn.addEventListener('click', handleClick);
-});
+// addBtn.addEventListener('click', () => {
+//   btn.addEventListener('click', handleClick);
+// });
 
-removeBtn.addEventListener('click', () => {
-  btn.removeEventListener('click', handleClick);
-});
+// removeBtn.addEventListener('click', () => {
+//   btn.removeEventListener('click', handleClick);
+// });
+
+// 16 ****************************************************
+// const btn = document.querySelector('#btn');
+
+// const handleClick = event => {
+//   console.log('event:', event);
+//   console.log('event type', event.type);
+
+//   console.log('this', this);
+//   console.log('target:', event.target);
+// };
+
+// btn.addEventListener('click', handleClick);
+
+// 17****************************************************
+// const form = document.querySelector('.form');
+// const loginInput = form.querySelector('input[type="text"]');
+// const passInput = form.querySelector('input[type="password"]');
+
+// // form.addEventListener('sumbit', handleSubmit);
+// form.addEventListener('submit', function (event) {
+//   event.preventDefault();
+//   console.log('Hello!!');
+//   const login = loginInput.value.trim();
+//   const password = passInput.value.trim();
+
+//   console.log(password);
+//   console.log(login);
+
+//   if (login === '' || password === '') {
+//     return alert('Пожалуйста введите валидную информацию!');
+//   }
+//   form.reset();
+
+//   alert(`
+//   Спасибо за регистрацию!
+//   Логин: ${login}
+//   Пароль: ${password}
+//   `);
+// });
+
+// function handleSubmit(event) {
+//   event.preventDefault();
+
+//   const login = loginInput.value.trim();
+//   const password = passInput.value.trim();
+//   console.log(password);
+//   console.log(login);
+
+//   if (login === '' || password === '') {
+//     return alert('Пожалуйста введите валидную информацию!');
+//   }
+//   form.reset();
+
+//   alert(`
+//   Спасибо за регистрацию!
+//   Логин: ${login}
+//   Пароль: ${password}
+//   `);
+// }
+// console.log(form);
+// console.log(loginInput);
+// console.log(passInput);
+
+// 18****************************************************
+// const clearLogBtn = document.querySelector('button[data-action="clear"]');
+// const logList = document.querySelector('.log-list');
+
+// window.addEventListener('keydown', logMessage);
+// window.addEventListener('keyup', logMessage);
+
+// clearLogBtn.addEventListener('click', e => {
+//   logList.innerHTML = '';
+// });
+
+// function logMessage({ type, key, code }) {
+//   const message = document.createElement('section');
+//   const title = document.createElement('h2');
+//   title.textContent = `${type} event`;
+
+//   const text = document.createElement('p');
+//   text.textContent = `key value is "${key}" | code value is "${code}"`;
+
+//   message.append(title, text);
+//   logList.appendChild(message);
+// }
+// 19****************************************************
 
 // ****************************************************
 // ****************************************************
