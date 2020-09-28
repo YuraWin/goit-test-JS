@@ -2992,7 +2992,28 @@
 //   message.append(title, text);
 //   logList.appendChild(message);
 // }
-// 19****************************************************
+// 19**module 8**************************************************
+const parent = document.querySelector('#parent');
+const child = document.querySelector('#child');
+const innerChild = document.querySelector('#inner-child');
+
+const parentClickHandler = () => alert('PARENT click hahdler');
+const childClickHandler = () => alert('CHILD click handler');
+const innerChildClickHandler = event => {
+  event.stopPropagation();
+  alert('INNER CHILD click handler');
+};
+
+parent.addEventListener('click', parentClickHandler);
+child.addEventListener('click', childClickHandler);
+innerChild.addEventListener('click', innerChildClickHandler);
+
+// const handleClick = event => {
+//   alert(`event.target: ${event.target.id}`);
+//   console.dir(`event.target: ${event.target}`);
+// };
+
+// parent.addEventListener('click', handleClick);
 
 // ****************************************************
 // ****************************************************
