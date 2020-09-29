@@ -95,3 +95,10 @@ body {
 .container {
   outline: solid 1px tomato;
 }
+/* *************************** */
+/* *************************** */
+/* *************************** */
+
+.active {
+  background-color: blue;
+}

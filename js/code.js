@@ -3080,7 +3080,48 @@
 // }
 // 23****************************************************
 
-// ****************************************************
-// ****************************************************
+// const tagsContainer = document.querySelector('.js-tags');
+// let selectedTag = null;
+// tagsContainer.addEventListener('click', onTagsContainerClick);
+
+// function onTagsContainerClick(event) {
+//   if (event.target.nodeName !== 'BUTTON') return;
+
+//   const currentActiveBtn = document.querySelector('.active');
+
+//   if (currentActiveBtn) {
+//     currentActiveBtn.classList.remove('active');
+//   }
+
+//   const nextActiveBtn = event.target;
+//   nextActiveBtn.classList.add('active');
+
+//   selectedTag = nextActiveBtn.dataset.value;
+//   console.log(selectedTag);
+
+// }
+// 23.1 ****************************************************
+// const tagsContainer = document.querySelector('.js-tags');
+// const selectedTag = new Set();
+
+// tagsContainer.addEventListener('click', onTagsContainerClick);
+
+// function onTagsContainerClick(event) {
+//   if (event.target.nodeName !== 'BUTTON') return;
+
+//   event.target.classList.toggle('active');
+
+//   if (event.target.classList.contains('active')) {
+//     //   if (event.target.classList.value.includes('active')) {
+//     selectedTag.add(event.target.dataset.value);
+//   } else {
+//     selectedTag.delete(event.target.dataset.value);
+//   }
+
+//   console.log(event.target.classList.value);
+//   console.log(selectedTag);
+// }
+// 24 ****************************************************
+
 // ****************************************************
 // ****************************************************
