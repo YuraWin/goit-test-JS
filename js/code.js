@@ -2993,27 +2993,92 @@
 //   logList.appendChild(message);
 // }
 // 19**module 8**************************************************
-const parent = document.querySelector('#parent');
-const child = document.querySelector('#child');
-const innerChild = document.querySelector('#inner-child');
+// const parent = document.querySelector('#parent');
+// const child = document.querySelector('#child');
+// const innerChild = document.querySelector('#inner-child');
 
-const parentClickHandler = () => alert('PARENT click hahdler');
-const childClickHandler = () => alert('CHILD click handler');
-const innerChildClickHandler = event => {
-  event.stopPropagation();
-  alert('INNER CHILD click handler');
-};
-
-parent.addEventListener('click', parentClickHandler);
-child.addEventListener('click', childClickHandler);
-innerChild.addEventListener('click', innerChildClickHandler);
-
-// const handleClick = event => {
-//   alert(`event.target: ${event.target.id}`);
-//   console.dir(`event.target: ${event.target}`);
+// const parentClickHandler = () => alert('PARENT click hahdler');
+// const childClickHandler = () => alert('CHILD click handler');
+// const innerChildClickHandler = event => {
+//   event.stopPropagation();
+//   alert('INNER CHILD click handler');
 // };
 
-// parent.addEventListener('click', handleClick);
+// parent.addEventListener('click', parentClickHandler);
+// child.addEventListener('click', childClickHandler);
+// innerChild.addEventListener('click', innerChildClickHandler);
+
+// // const handleClick = event => {
+// //   alert(`event.target: ${event.target.id}`);
+// //   console.dir(`event.target: ${event.target}`);
+// // };
+
+// // parent.addEventListener('click', handleClick);
+
+// 20 ****************************************************
+// const nav = document.querySelector('.js-nav');
+// nav.addEventListener('click', handleNavClick);
+// function handleNavClick(event) {
+//   event.preventDefault();
+
+//   const target = event.target;
+//   console.log('target', target);
+//   console.log('target.nodeName', target.nodeName);
+
+//   if (target.nodeName !== 'A') return;
+
+//   setActiveLink(target);
+// }
+
+// function setActiveLink(nextActiveLink) {
+//   const currentActiveLink = nav.querySelector('a.active');
+
+//   if (currentActiveLink) {
+//     currentActiveLink.classList.remove('active');
+//   }
+//   nextActiveLink.classList.add('active');
+// }
+// 21****************************************************
+// window.addEventListener(
+//   'scroll',
+//   _.throttle(() => {
+//     console.log('Scroll event handler invocation every 300ms.');
+//   }, 300),
+// );
+
+// window.addEventListener(
+//   'scroll',
+//   _.throttle(() => {
+//     console.log('Scroll event handler invocation every 300ms.');
+//   }, 300),
+// );
+
+// const minimum = _.min([4, 0, 8, 6]);
+// console.log(minimum);
+
+// 22****************************************************
+// const container = document.querySelector('.js-container');
+
+// container.addEventListener('click', onClickButton);
+
+// function onClickButton(even) {
+//   if (even.target.nodeName !== 'BUTTON') return;
+//   console.log(even.target.textContent);
+// }
+
+// const addBtn = document.querySelector('.js-add-btn');
+// addBtn.addEventListener('click', onAddBtnClick);
+// let labelCounter = 6;
+
+// function onAddBtnClick() {
+//   const btn = document.createElement('button');
+//   btn.textContent = `Кнопка ${labelCounter}`;
+//   btn.type = 'button';
+
+//   container.appendChild(btn);
+//   labelCounter += 1;
+// }
+// 23****************************************************
 
 // ****************************************************
 // ****************************************************
