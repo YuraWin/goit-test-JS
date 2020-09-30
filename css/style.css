@@ -1,4 +1,4 @@
-body {
+/* body {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -12,7 +12,7 @@ body {
 }
 .article-text {
   color: #f26419;
-}
+} */
 
 /* ****************************** */
 
@@ -39,7 +39,7 @@ body {
   background-color: #009688;
 } */
 /* **************************** */
-
+/* 
 body {
   font-family: Roboto, sans-serif;
 }
@@ -89,9 +89,9 @@ body {
 .btn.active {
   color: #fff;
   background-color: #2196f3;
-}
+} */
 /* ********************************** */
-
+/* 
 .container {
   outline: solid 1px tomato;
 }
@@ -99,6 +99,7 @@ body {
 /* *************************** */
 /* *************************** */
 
-.active {
+/* .active {
   background-color: blue;
-}
+} */
+/* ******************** */
