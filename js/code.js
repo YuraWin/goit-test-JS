@@ -3122,78 +3122,156 @@
 //   console.log(selectedTag);
 // }
 // 24 ****************************************************
-const colors = [
-  { hex: '#f44336', rgb: '244,67,54' },
-  { hex: '#e91e63', rgb: '233,30,99' },
-  { hex: '#9c27b0', rgb: '156,39,176' },
-  { hex: '#673ab7', rgb: '103,58,183' },
-  { hex: '#3f51b5', rgb: '63,81,181' },
-  { hex: '#2196f3', rgb: '33,150,243' },
-  { hex: '#00bcd4', rgb: '0,188,212' },
-  { hex: '#009688', rgb: '0,150,136' },
-  { hex: '#4caf50', rgb: '76,175,80' },
-  { hex: '#ffeb3b', rgb: '255,235,59' },
-  { hex: '#ff9800', rgb: '255,152,0' },
-  { hex: '#795548', rgb: '121,85,72' },
-  { hex: '#607d8b', rgb: '96,125,139' },
-];
+// const colors = [
+//   { hex: '#f44336', rgb: '244,67,54' },
+//   { hex: '#e91e63', rgb: '233,30,99' },
+//   { hex: '#9c27b0', rgb: '156,39,176' },
+//   { hex: '#673ab7', rgb: '103,58,183' },
+//   { hex: '#3f51b5', rgb: '63,81,181' },
+//   { hex: '#2196f3', rgb: '33,150,243' },
+//   { hex: '#00bcd4', rgb: '0,188,212' },
+//   { hex: '#009688', rgb: '0,150,136' },
+//   { hex: '#4caf50', rgb: '76,175,80' },
+//   { hex: '#ffeb3b', rgb: '255,235,59' },
+//   { hex: '#ff9800', rgb: '255,152,0' },
+//   { hex: '#795548', rgb: '121,85,72' },
+//   { hex: '#607d8b', rgb: '96,125,139' },
+// ];
 
-const paletteContainer = document.querySelector('.js-palette');
-const cardsMarkup = createColorCardsMakrUp(colors);
+// const paletteContainer = document.querySelector('.js-palette');
+// const cardsMarkup = createColorCardsMakrUp(colors);
 
-paletteContainer.insertAdjacentHTML('beforeend', cardsMarkup);
-paletteContainer.addEventListener('click', onClick);
+// paletteContainer.insertAdjacentHTML('beforeend', cardsMarkup);
+// paletteContainer.addEventListener('click', onClick);
 
-function createColorCardsMakrUp(colors) {
-  return colors
-    .map(({ hex, rgb }) => {
-      return `
-     <div class="color-card">
-        <div
-          class="color-swatch"
-          data-hex="${hex}"
-          data-rgb="${rgb}"
-          style="background-color: ${hex}"
-        ></div>
-        <div class="color-meta">
-          <p>HEX: ${hex}</p>
-          <p>RGB: ${rgb}</p>
-        </div>
-      </div>
-      `;
-    })
-    .join('');
-}
+// function createColorCardsMakrUp(colors) {
+//   return colors
+//     .map(({ hex, rgb }) => {
+//       return `
+//      <div class="color-card">
+//         <div
+//           class="color-swatch"
+//           data-hex="${hex}"
+//           data-rgb="${rgb}"
+//           style="background-color: ${hex}"
+//         ></div>
+//         <div class="color-meta">
+//           <p>HEX: ${hex}</p>
+//           <p>RGB: ${rgb}</p>
+//         </div>
+//       </div>
+//       `;
+//     })
+//     .join('');
+// }
 
-function onClick(evt) {
-  //   console.log(evt.target.classList.value);
-  //   if (evt.target.classList.value !== 'color-swatch') return;
-  if (!evt.target.classList.contains('color-swatch')) return;
+// function onClick(evt) {
+//   //   console.log(evt.target.classList.value);
+//   //   if (evt.target.classList.value !== 'color-swatch') return;
+//   if (!evt.target.classList.contains('color-swatch')) return;
 
-  const swatchEl = evt.target;
-  //   const parentColorCard = swatchEl.parentNode; //или closest
-  const parentColorCard = swatchEl.closest('.color-card');
+//   const swatchEl = evt.target;
+//   //   const parentColorCard = swatchEl.parentNode; //или closest
+//   const parentColorCard = swatchEl.closest('.color-card');
 
-  removeActiveCardClass();
-  addActiveCardClass(parentColorCard);
-  setBodyBgColor(swatchEl.dataset.hex);
+//   removeActiveCardClass();
+//   addActiveCardClass(parentColorCard);
+//   setBodyBgColor(swatchEl.dataset.hex);
 
-  function setBodyBgColor(color) {
-    document.body.style.backgroundColor = color;
-  }
+//   function setBodyBgColor(color) {
+//     document.body.style.backgroundColor = color;
+//   }
 
-  function removeActiveCardClass() {
-    const isActiveCard = document.querySelector('.color-card.is-active');
+//   function removeActiveCardClass() {
+//     const isActiveCard = document.querySelector('.color-card.is-active');
 
-    if (isActiveCard) {
-      isActiveCard.classList.remove('is-active');
-    }
-  }
+//     if (isActiveCard) {
+//       isActiveCard.classList.remove('is-active');
+//     }
+//   }
 
-  function addActiveCardClass(card) {
-    card.classList.add('is-active');
-  }
-}
+//   function addActiveCardClass(card) {
+//     card.classList.add('is-active');
+//   }
+// }
 
-// ****************************************************
+// 25****************************************************
+// const coordsOutputRef = document.querySelector('.js-coords');
+// let mouseMoveCbInvocationCounter = 0;
+
+// const throttledOnMouseMove = _.throttle(onMouseMove, 300);
+
+// window.addEventListener('mousemove', throttledOnMouseMove);
+
+// function onMouseMove(event) {
+//   mouseMoveCbInvocationCounter += 1;
+
+//   coordsOutputRef.textContent = `
+//   Коло-во вызовов onMouseMove: ${mouseMoveCbInvocationCounter},
+//    X: ${event.clientX},
+//    Y: ${event.clientY}
+//    `;
+// }
+
+// const inputRef = document.querySelector('.js-input');
+// const outputRef = document.querySelector('.js-output');
+
+// let inputCbInvocationCounter = 0;
+
+// inputRef.addEventListener('input', _.debounce(onInputChange, 1000));
+
+// function onInputChange(event) {
+//   inputCbInvocationCounter += 1;
+
+//   outputRef.textContent = `
+//   Кол-во вызовов onInputChange: ${inputCbInvocationCounter},
+//   Значение: ${event.target.value}`;
+// }
+
+// 26****************************************************
+
+// const tech = [
+//   { label: 'HTML' },
+//   { label: 'CSS' },
+//   { label: 'JavaScript' },
+//   { label: 'Node.js' },
+//   { label: 'React' },
+//   { label: 'Vue' },
+//   { label: 'Next.js' },
+//   { label: 'Mobx' },
+//   { label: 'Redux' },
+//   { label: 'React Router' },
+//   { label: 'GraphQl' },
+//   { label: 'PostgreSQL' },
+//   { label: 'MongoDB' },
+// ];
+
+// const refs = {
+//   list: document.querySelector('.js-list'),
+//   input: document.querySelector('#filter'),
+// };
+
+// refs.input.addEventListener('input', _.debounce(onFilterChange, 500));
+
+// const listItemsMarkup = createListItemMarkup(tech);
+// populatelist(listItemsMarkup);
+
+// function createListItemMarkup(items) {
+//   return items.map(item => `<li>${item.label}</li>`).join('');
+// }
+
+// function onFilterChange(evt) {
+//   const filter = evt.target.value.toLowerCase();
+//   const filteredItems = tech.filter(t => t.label.toLowerCase().includes(filter));
+
+//   const listItemsMarkup = createListItemMarkup(filteredItems);
+//   populatelist(listItemsMarkup);
+// }
+
+// function populatelist(markup) {
+//   refs.list.innerHTML = markup;
+// }
+
+// *27***************************************************
+
 // ****************************************************
