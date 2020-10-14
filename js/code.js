@@ -3277,23 +3277,23 @@
 // console.log(source);
 
 // 28****************************************************
-const output = document.querySelector('#js-output');
-const input = document.querySelector('#js-input');
-const btn = document.querySelector('#js-btn');
+// const output = document.querySelector('#js-output');
+// const input = document.querySelector('#js-input');
+// const btn = document.querySelector('#js-btn');
 
-const updateView = () => {
-  output.textContent = localStorage.getItem('goit-js-module-12' || '');
-};
+// const updateView = () => {
+//   output.textContent = localStorage.getItem('goit-js-module-12' || '');
+// };
 
-const handleClick = () => {
-  localStorage.setItem('goit-js-module-12', input.value);
-  updateView();
-};
+// const handleClick = () => {
+//   localStorage.setItem('goit-js-module-12', input.value);
+//   updateView();
+// };
 
-updateView();
+// updateView();
 
-btn.addEventListener('click', handleClick);
+// btn.addEventListener('click', handleClick);
 
-// ****************************************************
+// 29 ****************************************************
 // ****************************************************
 // ****************************************************
