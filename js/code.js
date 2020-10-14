@@ -3294,6 +3294,91 @@
 
 // btn.addEventListener('click', handleClick);
 
-// 29 ****************************************************
-// ****************************************************
+// 29 ***************************************************
+
+// const user = {
+//     name: 'Mango',
+//     age: 2,
+// };
+
+// console.log(JSON.stringify(user));
+
+// const savedUserData = '{"name":"Mango","age":2}';
+
+// console.log(JSON.parse(savedUserData));
+
+// console.log(localStorage);
+
+// localStorage.setItem("key", "datadata");
+// localStorage.setItem('my-data', JSON.stringify({ name: 'Orange', age: 35 }));
+
+// console.log('localStorage.getItem:',localStorage.getItem('my-data'));
+
+// console.log(JSON.parse(localStorage.getItem('my-data')));
+// 30  feedback****************************************************
+
+// const STORAGE_KEY = 'feedback-msg';
+const FORM_DATA = 'formData';
+const formData = JSON.parse(localStorage.getItem(FORM_DATA)) || {};
+console.log(formData);
+const refs = {
+    form: document.querySelector('.js-feedback-form'),
+    inputName: document.querySelector('.js-feedback-form input'),
+    textarea: document.querySelector('.js-feedback-form textarea'),
+};
+
+refs.form.addEventListener('submit', onFormSubmit);
+refs.form.addEventListener('input', inputForm);
+// refs.textarea.addEventListener('input', _.throttle(onTextareaInput, 500));
+populateTextarea();
+
+
+
+
+function inputForm(evt) {
+    formData[evt.target.name] = evt.target.value;
+    localStorage.setItem(FORM_DATA,JSON.stringify(formData));
+
+};
+
+
+function onFormSubmit(evt) {
+    evt.preventDefault();
+    console.log('Отправляем форму');
+   
+    //очистка через textarea
+    // refs.textarea.value=null;
+
+    //очистка формы через методы самой формы - очищает все поля  формы в начальное значение
+    evt.currentTarget.reset();
+    localStorage.removeItem(FORM_DATA);
+    
+    for (var prop in formData) {
+    if (formData.hasOwnProperty(prop)) {
+        delete formData[prop];
+    }
+}
+    
+};
+
+// function onTextareaInput(evt) {
+//     const message = evt.target.value;
+//     localStorage.setItem(STORAGE_KEY, message);
+
+//     // console.log(evt.target.value);
+
+// };
+
+function populateTextarea() {
+    
+     const savedMessage = JSON.parse(localStorage.getItem(FORM_DATA)).message;
+     const savedName = JSON.parse(localStorage.getItem(FORM_DATA)).name;
+    if (savedMessage) {
+        refs.textarea.value = savedMessage;
+    }
+    if (savedName) {
+        
+        refs.inputName.value = savedName;
+    }
+}
 // ****************************************************
