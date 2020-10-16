@@ -3317,68 +3317,112 @@
 // console.log(JSON.parse(localStorage.getItem('my-data')));
 // 30  feedback****************************************************
 
-// const STORAGE_KEY = 'feedback-msg';
-const FORM_DATA = 'formData';
-const formData = JSON.parse(localStorage.getItem(FORM_DATA)) || {};
-console.log(formData);
-const refs = {
-    form: document.querySelector('.js-feedback-form'),
-    inputName: document.querySelector('.js-feedback-form input'),
-    textarea: document.querySelector('.js-feedback-form textarea'),
-};
-
-refs.form.addEventListener('submit', onFormSubmit);
-refs.form.addEventListener('input', inputForm);
-// refs.textarea.addEventListener('input', _.throttle(onTextareaInput, 500));
-populateTextarea();
-
-
-
-
-function inputForm(evt) {
-    formData[evt.target.name] = evt.target.value;
-    localStorage.setItem(FORM_DATA,JSON.stringify(formData));
-
-};
-
-
-function onFormSubmit(evt) {
-    evt.preventDefault();
-    console.log('Отправляем форму');
-   
-    //очистка через textarea
-    // refs.textarea.value=null;
-
-    //очистка формы через методы самой формы - очищает все поля  формы в начальное значение
-    evt.currentTarget.reset();
-    localStorage.removeItem(FORM_DATA);
-    
-    for (var prop in formData) {
-    if (formData.hasOwnProperty(prop)) {
-        delete formData[prop];
-    }
-}
-    
-};
-
-// function onTextareaInput(evt) {
-//     const message = evt.target.value;
-//     localStorage.setItem(STORAGE_KEY, message);
-
-//     // console.log(evt.target.value);
-
+// const FORM_DATA = 'formData';
+// const formData = JSON.parse(localStorage.getItem(FORM_DATA)) || {};
+// console.log(formData);
+// const refs = {
+//   form: document.querySelector('.js-feedback-form'),
+//   inputName: document.querySelector('.js-feedback-form input'),
+//   textarea: document.querySelector('.js-feedback-form textarea'),
 // };
 
-function populateTextarea() {
-    
-     const savedMessage = JSON.parse(localStorage.getItem(FORM_DATA)).message;
-     const savedName = JSON.parse(localStorage.getItem(FORM_DATA)).name;
-    if (savedMessage) {
-        refs.textarea.value = savedMessage;
-    }
-    if (savedName) {
-        
-        refs.inputName.value = savedName;
-    }
+// refs.form.addEventListener('submit', onFormSubmit);
+// refs.form.addEventListener('input', inputForm);
+// populateTextarea();
+
+// function inputForm(evt) {
+//   formData[evt.target.name] = evt.target.value;
+//   localStorage.setItem(FORM_DATA, JSON.stringify(formData));
+// }
+
+// function onFormSubmit(evt) {
+//   evt.preventDefault();
+//   console.log('Отправляем форму');
+
+//   evt.currentTarget.reset();
+//   localStorage.removeItem(FORM_DATA);
+
+//   for (var prop in formData) {
+//     if (formData.hasOwnProperty(prop)) {
+//       delete formData[prop];
+//     }
+//   }
+// }
+
+// function populateTextarea() {
+//   const savedMessage = JSON.parse(localStorage.getItem(FORM_DATA)).message;
+//   const savedName = JSON.parse(localStorage.getItem(FORM_DATA)).name;
+//   if (savedMessage) {
+//     refs.textarea.value = savedMessage;
+//   }
+//   if (savedName) {
+//     refs.inputName.value = savedName;
+//   }
+// }
+// *31***************************************************
+import { colorCard } from '../templates/color-card.js';
+const colorCardTpl = Handlebars.compile(colorCard);
+
+import { colorCards } from '../templates/color-cards.js';
+
+import colorsData from './colors.js';
+const colors = JSON.parse(colorsData);
+// const colors = [
+//   { hex: '#f44336', rgb: '244,67,54' },
+//   { hex: '#e91e63', rgb: '233,30,99' },
+//   { hex: '#9c27b0', rgb: '156,39,176' },
+//   { hex: '#673ab7', rgb: '103,58,183' },
+//   { hex: '#3f51b5', rgb: '63,81,181' },
+//   { hex: '#2196f3', rgb: '33,150,243' },
+//   { hex: '#00bcd4', rgb: '0,188,212' },
+//   { hex: '#009688', rgb: '0,150,136' },
+//   { hex: '#4caf50', rgb: '76,175,80' },
+//   { hex: '#ffeb3b', rgb: '255,235,59' },
+//   { hex: '#ff9800', rgb: '255,152,0' },
+//   { hex: '#795548', rgb: '121,85,72' },
+//   { hex: '#607d8b', rgb: '96,125,139' },
+// ];
+
+const paletteContainer = document.querySelector('.js-palette');
+const cardsMarkup = createColorCardsMakrUp(colors);
+
+paletteContainer.insertAdjacentHTML('beforeend', cardsMarkup);
+paletteContainer.addEventListener('click', onClick);
+
+function createColorCardsMakrUp(colors) {
+  //   return colors.map(color => colorCardTpl(color)).join('');
+  return colors.map(colorCardTpl).join('');
 }
+
+function onClick(evt) {
+  //   console.log(evt.target.classList.value);
+  //   if (evt.target.classList.value !== 'color-swatch') return;
+  if (!evt.target.classList.contains('color-swatch')) return;
+
+  const swatchEl = evt.target;
+  //   const parentColorCard = swatchEl.parentNode; //или closest
+  const parentColorCard = swatchEl.closest('.color-card');
+
+  removeActiveCardClass();
+  addActiveCardClass(parentColorCard);
+  setBodyBgColor(swatchEl.dataset.hex);
+
+  function setBodyBgColor(color) {
+    document.body.style.backgroundColor = color;
+  }
+
+  function removeActiveCardClass() {
+    const isActiveCard = document.querySelector('.color-card.is-active');
+
+    if (isActiveCard) {
+      isActiveCard.classList.remove('is-active');
+    }
+  }
+
+  function addActiveCardClass(card) {
+    card.classList.add('is-active');
+  }
+}
+// ****************************************************
+// ****************************************************
 // ****************************************************
