@@ -3363,7 +3363,7 @@
 import { colorCard } from '../templates/color-card.js';
 const colorCardTpl = Handlebars.compile(colorCard);
 
-import { colorCards } from '../templates/color-cards.js';
+// import { colorCards } from '../templates/color-cards.js';
 
 import colorsData from './colors.js';
 const colors = JSON.parse(colorsData);
