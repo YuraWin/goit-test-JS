@@ -3360,69 +3360,85 @@
 //   }
 // }
 // *31***************************************************
-import { colorCard } from '../templates/color-card.js';
-const colorCardTpl = Handlebars.compile(colorCard);
+// // шаблон для одной карточки
+// import { colorCard } from '../templates/color-card.js';
+// const colorCardTpl = Handlebars.compile(colorCard);
 
+// // или шаблон для всех карточек
 // import { colorCards } from '../templates/color-cards.js';
+// const colorCardsTpl = Handlebars.compile(colorCards);
+// // *************************
 
-import colorsData from './colors.js';
-const colors = JSON.parse(colorsData);
-// const colors = [
-//   { hex: '#f44336', rgb: '244,67,54' },
-//   { hex: '#e91e63', rgb: '233,30,99' },
-//   { hex: '#9c27b0', rgb: '156,39,176' },
-//   { hex: '#673ab7', rgb: '103,58,183' },
-//   { hex: '#3f51b5', rgb: '63,81,181' },
-//   { hex: '#2196f3', rgb: '33,150,243' },
-//   { hex: '#00bcd4', rgb: '0,188,212' },
-//   { hex: '#009688', rgb: '0,150,136' },
-//   { hex: '#4caf50', rgb: '76,175,80' },
-//   { hex: '#ffeb3b', rgb: '255,235,59' },
-//   { hex: '#ff9800', rgb: '255,152,0' },
-//   { hex: '#795548', rgb: '121,85,72' },
-//   { hex: '#607d8b', rgb: '96,125,139' },
-// ];
+// import colorsData from './colors.js';
+// const colors = JSON.parse(colorsData);
 
-const paletteContainer = document.querySelector('.js-palette');
-const cardsMarkup = createColorCardsMakrUp(colors);
+// console.log();
 
-paletteContainer.insertAdjacentHTML('beforeend', cardsMarkup);
-paletteContainer.addEventListener('click', onClick);
+// const paletteContainer = document.querySelector('.js-palette');
+// const cardsMarkup = createColorCardsMakrUp(colors);
 
-function createColorCardsMakrUp(colors) {
-  //   return colors.map(color => colorCardTpl(color)).join('');
-  return colors.map(colorCardTpl).join('');
-}
+// paletteContainer.insertAdjacentHTML('beforeend', cardsMarkup);
+// paletteContainer.addEventListener('click', onClick);
 
-function onClick(evt) {
-  //   console.log(evt.target.classList.value);
-  //   if (evt.target.classList.value !== 'color-swatch') return;
-  if (!evt.target.classList.contains('color-swatch')) return;
+// function createColorCardsMakrUp(colors) {
+//   //   return colors.map(color => colorCardTpl(color)).join('');
+//   // return colors.map(colorCardTpl).join('');
+//   return colorCardsTpl(colors);
+// }
 
-  const swatchEl = evt.target;
-  //   const parentColorCard = swatchEl.parentNode; //или closest
-  const parentColorCard = swatchEl.closest('.color-card');
+// function onClick(evt) {
+//   //   console.log(evt.target.classList.value);
+//   //   if (evt.target.classList.value !== 'color-swatch') return;
+//   if (!evt.target.classList.contains('color-swatch')) return;
 
-  removeActiveCardClass();
-  addActiveCardClass(parentColorCard);
-  setBodyBgColor(swatchEl.dataset.hex);
+//   const swatchEl = evt.target;
+//   //   const parentColorCard = swatchEl.parentNode; //или closest
+//   const parentColorCard = swatchEl.closest('.color-card');
 
-  function setBodyBgColor(color) {
-    document.body.style.backgroundColor = color;
-  }
+//   removeActiveCardClass();
+//   addActiveCardClass(parentColorCard);
+//   setBodyBgColor(swatchEl.dataset.hex);
 
-  function removeActiveCardClass() {
-    const isActiveCard = document.querySelector('.color-card.is-active');
+//   function setBodyBgColor(color) {
+//     document.body.style.backgroundColor = color;
+//   }
 
-    if (isActiveCard) {
-      isActiveCard.classList.remove('is-active');
-    }
-  }
+//   function removeActiveCardClass() {
+//     const isActiveCard = document.querySelector('.color-card.is-active');
 
-  function addActiveCardClass(card) {
-    card.classList.add('is-active');
-  }
-}
-// ****************************************************
+//     if (isActiveCard) {
+//       isActiveCard.classList.remove('is-active');
+//     }
+//   }
+
+//   function addActiveCardClass(card) {
+//     card.classList.add('is-active');
+//   }
+// }
+// *32 ***************************************************
+
+// // шаблон для одной карточки
+// import { colorCard } from '../templates/color-card.js';
+// const colorCardTpl = Handlebars.compile(colorCard);
+
+// // или шаблон для всех карточек
+// import { colorCards } from '../templates/color-cards.js';
+// const colorCardsTpl = Handlebars.compile(colorCards);
+// // *************************
+
+// import colorsData from './colors.js';
+// const colors = JSON.parse(colorsData);
+
+import countriesList from './countries.js';
+const countries = JSON.parse(countriesList);
+
+import itemsTemplateList from '../templates/gallery-items.js';
+const itemsTemplate = Handlebars.compile(itemsTemplateList);
+
+const galleryRef = document.querySelector('.js-gallery');
+
+const markup = itemsTemplate(countries);
+galleryRef.insertAdjacentHTML('beforeend', markup);
+
 // ****************************************************
 // ****************************************************

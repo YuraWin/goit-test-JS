@@ -1,4 +1,4 @@
-[
+export default `[
   {
     "name": "Австралия",
     "capital": "Канберра",
@@ -53,4 +53,4 @@
     "flag": "https://wikiway.com/upload/iblock/2b1/600px-Flag_of_Portugal_svg.png",
     "infected": true
   }
-]
+]`;
