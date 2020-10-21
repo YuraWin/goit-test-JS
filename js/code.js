@@ -3415,30 +3415,23 @@
 //     card.classList.add('is-active');
 //   }
 // }
-// *32 ***************************************************
+// *32 ****Country FLAG***********************************************
 
-// // шаблон для одной карточки
-// import { colorCard } from '../templates/color-card.js';
-// const colorCardTpl = Handlebars.compile(colorCard);
+// import countriesList from './countries.js';
+// const countries = JSON.parse(countriesList);
 
-// // или шаблон для всех карточек
-// import { colorCards } from '../templates/color-cards.js';
-// const colorCardsTpl = Handlebars.compile(colorCards);
-// // *************************
+// import itemsTemplateList from '../templates/gallery-items.js';
+// const itemsTemplate = Handlebars.compile(itemsTemplateList);
 
-// import colorsData from './colors.js';
-// const colors = JSON.parse(colorsData);
+// const galleryRef = document.querySelector('.js-gallery');
 
-import countriesList from './countries.js';
-const countries = JSON.parse(countriesList);
+// const markup = itemsTemplate(countries);
+// galleryRef.insertAdjacentHTML('beforeend', markup);
 
-import itemsTemplateList from '../templates/gallery-items.js';
-const itemsTemplate = Handlebars.compile(itemsTemplateList);
+// 33  ****************************************************
+function roundCentury(year) {
+  return Math.ceil(year / 100) + 'th';
+}
+console.log(roundCentury(2154));
 
-const galleryRef = document.querySelector('.js-gallery');
-
-const markup = itemsTemplate(countries);
-galleryRef.insertAdjacentHTML('beforeend', markup);
-
-// ****************************************************
 // ****************************************************
