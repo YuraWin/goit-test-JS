@@ -3429,9 +3429,18 @@
 // galleryRef.insertAdjacentHTML('beforeend', markup);
 
 // 33  ****************************************************
-function roundCentury(year) {
-  return Math.ceil(year / 100) + 'th';
-}
-console.log(roundCentury(2154));
+// function roundCentury(year) {
+//   return Math.ceil(year / 100) + 'th';
+// }
+// console.log(roundCentury(2154));
 
 // ****************************************************
+
+const fn = arr => arr.map(el => {
+  const item = document.createElement('div');
+  item.textContent = el;
+
+  return item;
+ });
+
+console.log(fn(['html', 'css', 'js', 'react']));
