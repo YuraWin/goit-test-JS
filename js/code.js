@@ -3436,11 +3436,29 @@
 
 // ****************************************************
 
-const fn = arr => arr.map(el => {
-  const item = document.createElement('div');
-  item.textContent = el;
+// const fn = arr => arr.map(el => {
+//   const item = document.createElement('div');
+//   item.textContent = el;
 
-  return item;
- });
+//   return item;
+//  });
 
-console.log(fn(['html', 'css', 'js', 'react']));
+// const divArray = fn(['html', 'css', 'js', 'react']);
+// console.log(fn(['html', 'css', 'js', 'react']));
+
+// const body = document.querySelector('body');
+
+// divArray.map(el => {
+//     body.append(el);
+// })
+
+//*codewar*********************************************** */
+
+const filter_list = (massiv) => {
+    return massiv.filter(el => typeof (el) === "number" );
+}
+console.log(filter_list([1, 2, 'a', 'b']));
+console.log(filter_list([1, 'a', 'b', 0, 15]));
+console.log(filter_list([1, 2, 'aasf', '1', '123', 123]));
+
+
