@@ -3462,9 +3462,6 @@
 // console.log(filter_list([1, 2, 'aasf', '1', '123', 123]));
 
 // *************************************
-
-var math = {
-  factorial(num) { return num <= 0 ? 1 : num * this.factorial(num - 1); }
-};
-
-console.log(math.factorial(5));
+var arr = ['will', 'love'];
+var data = ['You', 'spread', 'operator', ...arr];
+console.log(data); // ['You', 'will', 'love', 'spread', 'operator']
