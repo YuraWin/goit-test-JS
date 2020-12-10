@@ -1669,7 +1669,7 @@
 -add(product); //добавляет продукт в корзину
 -remove(productName); // удаляет продукт из корзины по имени товара
 -clear(); // очистить корзину товаров
--countTotalPrice(); // общая сумма товаров в корзине 
+-countTotalPrice(); // общая сумма товаров в корзине
 -increaseQuantity(productName); //увеличить кол-во товаров в корзине
 -decreaseQuantity(productName); //уменьшить кол-во товаров в корзине
 
@@ -3463,8 +3463,7 @@
 
 // *************************************
 
-var math = {
-  factorial(num) { return num <= 0 ? 1 : num * this.factorial(num - 1); }
-};
+}
 
-console.log(math.factorial(5));
+// foo();	//prints true on console
+// console.log(this === window) //Prints true on console.
