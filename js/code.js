@@ -3462,8 +3462,6 @@
 // console.log(filter_list([1, 2, 'aasf', '1', '123', 123]));
 
 // *************************************
-
-}
-
-// foo();	//prints true on console
-// console.log(this === window) //Prints true on console.
+var arr = ['will', 'love'];
+var data = ['You', 'spread', 'operator', ...arr];
+console.log(data); // ['You', 'will', 'love', 'spread', 'operator']
